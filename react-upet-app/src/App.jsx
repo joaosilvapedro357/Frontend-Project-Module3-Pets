@@ -11,6 +11,8 @@ import EditPetPage from './pages/EditPetPage';
 import CreatePetPage from './pages/CreatePetPage';
 import AdoptPage from './pages/AdoptPage';
 import UserPage from './pages/UserPage';
+import Navbar from './Components/Navbar';
+import Sidebar from './Components/Sidebar';
 
 
 
@@ -18,6 +20,7 @@ function App() {
   
   return (
       <div>
+        <Navbar/>
          <Routes>
           <Route path="/signup" element={<SignUpPage />} />
           <Route path="/login" element={<LoginPage />} />
@@ -29,6 +32,7 @@ function App() {
           <Route path="/adopt" element={<AdoptPage />} />
           <Route path="/user" element={<UserPage />} />
         </Routes>
+        
       </div>
     
   )
