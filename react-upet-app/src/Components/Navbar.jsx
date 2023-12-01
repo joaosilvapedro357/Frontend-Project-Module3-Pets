@@ -2,7 +2,27 @@ import { Link, useLocation } from "react-router-dom";
 import { useContext } from "react";
 
 
-function Navbar({ toggleSidebar }) {
+function Navbar() {
+  return (
+    <nav className="navbar">
+        <div className="navbar-links">
+            <Link to="/" className="homepage-link"><img className="home-png" src="/images/home-page.png"/></Link>
+            <div className="nav-pets-adopt">
+              <Link to="/pets" className="pets-link"> PETS</Link>
+              <p>|</p>
+              <Link to="/adopt" className="adopt-link"> ADOPT </Link>
+            </div>
+        </div>
+        <div>
+            <Link to="/" className="user-img-link"><img className="user-png" src="/images/user.png"/></Link>
+        </div>
+    </nav>
+  )
+}
+
+export default Navbar
+
+/*function Navbar({ toggleSidebar }) {
   const location = useLocation();
   const { isLoggedIn, logOutUser } = useContext(AuthContext);
 
@@ -32,7 +52,7 @@ function Navbar({ toggleSidebar }) {
   return (
     <nav className="bg-blue-600 text-white shadow-md fixed top-0 left-0 w-full z-50">
       <div className="flex justify-between h-20 items-center px-4">
-        {/* Left flex container for burger icon and text */}
+        { Left flex container for burger icon and text } // deleted comment here to comment all
         <div className="flex items-center space-x-2 w-1/4">
           <button
             className="flex items-center text-l py-1"
@@ -45,7 +65,7 @@ function Navbar({ toggleSidebar }) {
           </span>
         </div>
 
-        {/* Center flex container for logo */}
+        { Center flex container for logo } // deleted comment here to comment all
         <div className="flex justify-center w-1/2">
           <img src={logo} alt="Logo" className="h-8 w-auto" />
         </div>
@@ -66,3 +86,4 @@ function Navbar({ toggleSidebar }) {
 }
 
 export default Navbar;
+*/

@@ -1,9 +1,12 @@
-import React from 'react';
+import { Link } from "react-router-dom"
 
-function ProfilesPage() {
+function Petspage() {
   return (
-    <div>ProfilesPage</div>
+    <div className="pets-page">
+        <h1 className="pets-title">My Pets</h1>
+        <h2 className="Petspage-description">Access your pets Informations</h2>
+    </div>
   )
 }
 
-export default ProfilesPage;
+export default Petspage
