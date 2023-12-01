@@ -102,7 +102,7 @@ return (
       <label> Name:<input type="text" name="name" value={name} 
       onChange={(e)=>setName(e.target.value)}/></label>
       <label> Animal:<input type="text" name="animal" value={animal} 
-      onChange={(e)=>setName(e.target.value)}/></label>
+      onChange={(e)=>setAnimal(e.target.value)}/></label>
       <label> Image:<input type="text" name="image" value={image} 
       onChange={(e) => setImage(e.target.value)} />
       </label>
@@ -136,12 +136,22 @@ return (
       <label> Medical Record: <input type="text" name="medicalRecord" 
       value={medicalRecord} onChange={(e) => setMedicalRecord(e.target.value)} />
       </label>
+      <label> Health Status: <input type="text" name="healthStatus" 
+      value={healthStatus} onChange={(e) => setHealthStatus(e.target.value)} />
+      </label>
+      <label> Location: <input type="text" name="location" 
+      value={location} onChange={(e) => setLocation(e.target.value)} />
+      </label>
+      <label> Associaton Name: <input type="text" name="associationName" 
+      value={associationName} onChange={(e) => setAssociationName(e.target.value)} />
+      </label>
       < button type="submit">Submit</button>
     </form>
     <div>
     {myPetDetails.map((pet) => (
       <div key={pet._id}>
         <p>Name: {pet.name}</p>
+        <p>Animal: {pet.animal}</p>
         <p>Image: {pet.image}</p>
         <p>Age: {pet.age}</p>
         <p>Breed: {pet.breed}</p>
@@ -153,6 +163,9 @@ return (
         <p>Description: {pet.description}</p>
         <p>Diet: {pet.diet}</p>
         <p>Medical Record: {pet.medicalRecord}</p>
+        <p>Health Status: {pet.healthStatus}</p>
+        <p>Location: {pet.location}</p>
+        <p>Association Name: {pet.associationName}</p>
       </div>
         ))}
     </div>
