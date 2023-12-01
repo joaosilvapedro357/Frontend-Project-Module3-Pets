@@ -27,6 +27,20 @@ function ProfilesPage() {
 
   const navigate = useNavigate();
 
+  const getAllPets = () =>{
+    axios.get(`${BACKEND_URL}/dogs`)
+  .then((response) => {
+    // Check if the array is not empty before accessing its first element
+    // Access the title property from the first item in the array
+    setMyPetDetails(response.data);
+    console.log(response.data)
+  })
+  .catch((error) => {
+    console.error("Error fetching pet details:", error);
+    // Handle the error and display an error message
+  });
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
     // Call the onSubmit function passed from the parent component
@@ -48,7 +62,19 @@ function ProfilesPage() {
     // In the url we can use 'http://localhost:${PORT}' as well.
     axios.post(`${BACKEND_URL}/dog`, requestBody)
     .then(() => {
-      navigate("/pets"); 
+        getAllPets();
+        setName('');
+        setAge('');
+        setImage('');
+        setBreed('');
+        setHairType('');
+        setChipId('');
+        setSex('');
+        setSize('');
+        setWeight('');
+        setDescription('');
+        setDiet('');
+        setMedicalRecord('');
     })
     .catch((error) => {
       console.error("Error creating pet:", error);
@@ -56,17 +82,7 @@ function ProfilesPage() {
 };
 
 useEffect(() => {
-axios.get(`${BACKEND_URL}/dogs`)
-  .then((response) => {
-    // Check if the array is not empty before accessing its first element
-    // Access the title property from the first item in the array
-    setMyPetDetails(response.data);
-    console.log(response.data)
-  })
-  .catch((error) => {
-    console.error("Error fetching pet details:", error);
-    // Handle the error and display an error message
-  });
+  getAllPets();
 }, []); 
 
   return ( 
@@ -99,7 +115,7 @@ axios.get(`${BACKEND_URL}/dogs`)
       </form>
       <div>
       {myPetDetails.map((pet) => (
-        <div key={pet}>
+        <div key={pet._id}>
           <p>Name: {pet.name}</p>
           <p>Image: {pet.image}</p>
           <p>Age: {pet.age}</p>

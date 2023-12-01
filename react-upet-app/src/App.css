@@ -91,11 +91,22 @@
   color:  rgb(53, 39, 26);
   font-weight: bold;
   margin-left: 10px;
+  margin-right: 10px;
 }
 
 .adopt-link:hover{
   color:  rgb(153, 115, 236);
 }
+
+/*.add-link{
+  color:  rgb(53, 39, 26);
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.add-link:hover{
+  color:  rgb(153, 115, 236);
+}*/
 
 .user-png{
     width: 26px;
@@ -183,6 +194,9 @@ body{
 
 /* - Pets Page ------------------------------------------------------------------------*/
 
+.pets-create{
+  margin-top: 100px;
+}
 .pets-page{
   color: rgb(53, 39, 26);
   margin-top: 0;
