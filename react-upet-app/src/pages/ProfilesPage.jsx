@@ -1,13 +1,14 @@
-import { useState } from "react"
-import { Link, useParams } from "react-router-dom"
-import { useNavigate } from "react-router-dom"
-import axios from "axios"
-import { useEffect, navigate } from "react"
+import { useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { useEffect, navigate } from "react";
 
 //const PORT = 3000;
-const BACKEND_URL = 'http://localhost:3000';
+const BACKEND_URL = 'http://localhost:3000/api'; /* it is api because we defined it 
+like that in the routes */
 
-function PetsPage() {
+function ProfilesPage() {
 
   const [name, setName] = useState('');
   const [age, setAge] = useState('');
@@ -21,6 +22,8 @@ function PetsPage() {
   const [description, setDescription] = useState('');
   const [diet, setDiet] = useState('');
   const [medicalRecord, setMedicalRecord] = useState('');
+
+  const [myPetDetails, setMyPetDetails] = useState([]);
 
   const navigate = useNavigate();
 
@@ -43,13 +46,28 @@ function PetsPage() {
     }
 
     // In the url we can use 'http://localhost:${PORT}' as well.
-    axios.post(`${BACKEND_URL}`+'/dog', requestBody).then(() => {
-      navigate("/pets"); // maybe './pets'
+    axios.post(`${BACKEND_URL}/dog`, requestBody)
+    .then(() => {
+      navigate("/pets"); 
     })
     .catch((error) => {
       console.error("Error creating pet:", error);
     });
 };
+
+useEffect(() => {
+axios.get(`${BACKEND_URL}/dogs`)
+  .then((response) => {
+    // Check if the array is not empty before accessing its first element
+    // Access the title property from the first item in the array
+    setMyPetDetails(response.data);
+    console.log(response.data)
+  })
+  .catch((error) => {
+    console.error("Error fetching pet details:", error);
+    // Handle the error and display an error message
+  });
+}, []); 
 
   return ( 
     <div>
@@ -79,9 +97,27 @@ function PetsPage() {
         </label>
         < button type="submit">Submit</button>
       </form>
+      <div>
+      {myPetDetails.map((pet) => (
+        <div key={pet}>
+          <p>Name: {pet.name}</p>
+          <p>Image: {pet.image}</p>
+          <p>Age: {pet.age}</p>
+          <p>Breed: {pet.breed}</p>
+          <p>Hair Type: {pet.hairType}</p>
+          <p>ChipId: {pet.chipId}</p>
+          <p>Sex: {pet.sex}</p>
+          <p>Size: {pet.size}</p>
+          <p>Weight: {pet.weight}</p>
+          <p>Description: {pet.description}</p>
+          <p>Diet: {pet.diet}</p>
+          <p>Medical Record: {pet.medicalRecord}</p>
+        </div>
+          ))}
+      </div>
     </div>
   ) 
 }
 
-export default PetsPage
+export default ProfilesPage;
 
