@@ -27,13 +27,14 @@ function ProfilesPage() {
 
   const navigate = useNavigate();
 
+  const {dogId} = useParams();
+
   const getAllPets = () =>{
     axios.get(`${BACKEND_URL}/dogs`)
   .then((response) => {
     // Check if the array is not empty before accessing its first element
     // Access the title property from the first item in the array
     setMyPetDetails(response.data);
-    console.log(response.data)
   })
   .catch((error) => {
     console.error("Error fetching pet details:", error);
@@ -75,6 +76,7 @@ function ProfilesPage() {
         setDescription('');
         setDiet('');
         setMedicalRecord('');
+        /* ADD SUCCESS MESSAGE AFTER ADDING PET */
     })
     .catch((error) => {
       console.error("Error creating pet:", error);
@@ -85,49 +87,65 @@ useEffect(() => {
   getAllPets();
 }, []); 
 
+const deletePet = () =>{
+  axios.delete(`${BACKEND_URL}/dogs/:${dogId}`).then(()=>{
+      navigate("/pets");
+  })
+  .catch((error)=> console.log(error));
+}
+
   return ( 
-    <div>
+    <div className="pets-page">
+      <h1 className="pets-title">My Pets</h1>
+      <h2 className="Petspage-description">Access your pets Informations</h2>
       <form onSubmit={handleSubmit} className="pets-create">
-        <label> Name:<input type="text" name="name" value={name} onChange={(e)=>setName(e.target.value)}/></label>
-        <label> Image:<input type="text" name="image" value={image} onChange={(e) => setImage(e.target.value)} />
+        <div className="pet-create1">
+          <label className="form-pet-name"><p className="p-form-name"> Name: </p><input className="form-name" type="text" name="name" value={name} onChange={(e)=>setName(e.target.value)}/></label>
+          <label className="form-pet-image"><p className="p-form-image"> Image: </p><input className="form-image" type="text" name="image" value={image} onChange={(e) => setImage(e.target.value)} />
+          </label>
+          <label className="form-pet-age"><p className="p-form-age"> Age: </p><input className="form-age" type="text" name="age" value={age} onChange={(e) => setAge(e.target.value)} />
+          </label>
+          <label className="form-pet-breed"><p className="p-form-breed"> Breed: </p><input className="form-breed" type="text" name="breed" value={breed} onChange={(e) => setBreed(e.target.value)} />
+          </label>
+          <label className="form-pet-hair"><p className="p-form-hair"> Hair: </p><input className="form-hair" type="text" name="hairType" value={hairType} onChange={(e) => setHairType(e.target.value)} />
+          </label>
+          <label className="form-pet-chip"><p className="p-form-chip"> Chip: </p><input className="form-chip" type="text" name="chipId" value={chipId} onChange={(e) => setChipId(e.target.value)} />
+          </label> <br/> 
+        </div>
+        <div className="pet-create2">
+          <label className="form-pet-sex"><p className="p-form-sex"> Sex: </p><input className="form-sex" type="text" name="sex" value={sex} onChange={(e) => setSex(e.target.value)} />
+          </label>
+          <label className="form-pet-size"><p className="p-form-size"> Size: </p><input className="form-size" type="text" name="size" value={size} onChange={(e) => setSize(e.target.value)} />
+          </label>
+          <label className="form-pet-weight"><p className="p-form-weight"> Weight: </p><input className="form-weight" type="text" name="weight" value={weight} onChange={(e) => setWeight(e.target.value)} />
+          </label>
+          <label className="form-pet-description"><p className="p-form-description"> Description: </p><input className="form-description" type="text" name="description" value={description} onChange={(e) => setDescription(e.target.value)} />
+          </label>
+          <label className="form-pet-diet"><p className="p-form-diet"> Diet: </p><input className="form-diet" type="text" name="diet" value={diet} onChange={(e) => setDiet(e.target.value)} />
+          </label>
+          <label className="form-pet-medical"><p className="p-form-medical"> Medical Record: </p><input className="form-medical" type="text" name="medicalRecord" value={medicalRecord} onChange={(e) => setMedicalRecord(e.target.value)} />
         </label>
-        <label> Age: <input type="text" name="age" value={age} onChange={(e) => setAge(e.target.value)} />
-        </label>
-        <label> Breed: <input type="text" name="breed" value={breed} onChange={(e) => setBreed(e.target.value)} />
-        </label>
-        <label> HairType: <input type="text" name="hairType" value={hairType} onChange={(e) => setHairType(e.target.value)} />
-        </label>
-        <label> ChipId: <input type="text" name="chipId" value={chipId} onChange={(e) => setChipId(e.target.value)} />
-        </label>
-        <label> Sex: <input type="text" name="sex" value={sex} onChange={(e) => setSex(e.target.value)} />
-        </label>
-        <label> Size: <input type="text" name="size" value={size} onChange={(e) => setSize(e.target.value)} />
-        </label>
-        <label> Weight: <input type="text" name="weight" value={weight} onChange={(e) => setWeight(e.target.value)} />
-        </label>
-        <label> Description: <input type="text" name="description" value={description} onChange={(e) => setDescription(e.target.value)} />
-        </label>
-        <label> Diet: <input type="text" name="diet" value={diet} onChange={(e) => setDiet(e.target.value)} />
-        </label>
-        <label> Medical Record: <input type="text" name="medicalRecord" value={medicalRecord} onChange={(e) => setMedicalRecord(e.target.value)} />
-        </label>
-        < button type="submit">Submit</button>
+        </div>
       </form>
-      <div>
+      <div className="add-buton">
+          < button type="submit">Submit</button>
+        </div>
+      <div className="pet-details">
       {myPetDetails.map((pet) => (
-        <div key={pet._id}>
-          <p>Name: {pet.name}</p>
-          <p>Image: {pet.image}</p>
-          <p>Age: {pet.age}</p>
-          <p>Breed: {pet.breed}</p>
-          <p>Hair Type: {pet.hairType}</p>
-          <p>ChipId: {pet.chipId}</p>
-          <p>Sex: {pet.sex}</p>
-          <p>Size: {pet.size}</p>
-          <p>Weight: {pet.weight}</p>
-          <p>Description: {pet.description}</p>
-          <p>Diet: {pet.diet}</p>
-          <p>Medical Record: {pet.medicalRecord}</p>
+        <div className="pet-details-info" key={pet._id}>
+          <p className="p-name">Name: {pet.name}</p>
+          <img src={pet.image} alt="Pet Image" />
+          <p className="p-age"> Age: {pet.age}</p>
+          <p className="p-breed"> Breed: {pet.breed}</p>
+          <p className="p-hair"> Hair Type: {pet.hairType}</p>
+          <p className="p-chip"> ChipId: {pet.chipId}</p>
+          <p className="p-sex"> Sex: {pet.sex}</p>
+          <p className="p-size"> Size: {pet.size}</p>
+          <p className="p-weight"> Weight: {pet.weight}</p>
+          <p className="p-description"> Description: {pet.description}</p>
+          <p className="p-diet"> Diet: {pet.diet}</p>
+          <p className="p-medical"> Medical Record: {pet.medicalRecord}</p>
+          <button className="petpage-button" onClick={deletePet}> Delete </button>
         </div>
           ))}
       </div>

@@ -145,6 +145,8 @@ return (
       <label> Associaton Name: <input type="text" name="associationName" 
       value={associationName} onChange={(e) => setAssociationName(e.target.value)} />
       </label>
+      <img className="adopt-apamg-image" src="/images/apamg-png.webp" />
+        {/*<Link to="/pets" className="adopt-button"> Apply </Link>*/}
       < button type="submit">Submit</button>
     </form>
     <div>

@@ -195,17 +195,333 @@ body{
 /* - Pets Page ------------------------------------------------------------------------*/
 
 .pets-create{
-  margin-top: 100px;
+  margin-top:40px;
+  display: flex;
+  
 }
 .pets-page{
   color: rgb(53, 39, 26);
   margin-top: 0;
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /*max-width: 850px;*/
+}
+
+.add-buton{
+  margin-top: 20px;;
 }
 
 .pets-title{
-  margin-top: -225px;
+  margin-top: 25px;
 }
+
+.pet-details{
+  margin-left: 10px;
+  margin-top: 50px;
+}
+
+.pet-details-info{
+  border: 2px solid rgb(124, 115, 105);
+  box-shadow: 0 0px 2px rgb(124, 115, 105);
+  border-radius: 15px;
+  padding: 2px;
+  margin: 3px;
+  width: 500px;
+  margin-top: 30px;
+}
+
+.pet-create1{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 280px;
+  align-items: stretch;
+}
+
+.pet-create2{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 280px;
+  align-items: stretch;
+  margin-left: 30px;
+}
+
+.petpage-button{
+  margin-bottom: 20px;
+}
+
+.p-form-name{
+  border: 2px solid rgb(124, 115, 105);
+  box-shadow: 0 0px 2px rgb(124, 115, 105);
+  border-radius: 5px;
+  padding: 2px;
+  margin: 3px;
+  margin-top: 20px;
+}
+
+.p-form-image{
+  border: 2px solid rgb(124, 115, 105);
+  box-shadow: 0 0px 2px rgb(124, 115, 105);
+  border-radius: 5px;
+  padding: 2px;
+  margin: 3px;
+}
+
+.p-form-age{
+  border: 2px solid rgb(124, 115, 105);
+  box-shadow: 0 0px 2px rgb(124, 115, 105);
+  border-radius: 5px;
+  padding: 2px;
+  margin: 3px;
+}
+
+.p-form-breed{
+  border: 2px solid rgb(124, 115, 105);
+  box-shadow: 0 0px 2px rgb(124, 115, 105);
+  border-radius: 5px;
+  padding: 2px;
+  margin: 3px;
+}
+
+.p-form-hair{
+  border: 2px solid rgb(124, 115, 105);
+  box-shadow: 0 0px 2px rgb(124, 115, 105);
+  border-radius: 5px;
+  padding: 2px;
+  margin: 3px;
+}
+
+.p-form-chip{
+  border: 2px solid rgb(124, 115, 105);
+  box-shadow: 0 0px 2px rgb(124, 115, 105);
+  border-radius: 5px;
+  padding: 2px;
+  margin: 3px;
+}
+
+.p-form-sex{
+  border: 2px solid rgb(124, 115, 105);
+  box-shadow: 0 0px 2px rgb(124, 115, 105);
+  border-radius: 5px;
+  padding: 2px;
+  margin: 3px;
+}
+
+.p-form-size{
+  border: 2px solid rgb(124, 115, 105);
+  box-shadow: 0 0px 2px rgb(124, 115, 105);
+  border-radius: 5px;
+  padding: 2px;
+  margin: 3px;
+}
+
+.p-form-weight{
+  border: 2px solid rgb(124, 115, 105);
+  box-shadow: 0 0px 2px rgb(124, 115, 105);
+  border-radius: 5px;
+  padding: 2px;
+  margin: 3px;
+}
+
+.p-form-description{
+  border: 2px solid rgb(124, 115, 105);
+  box-shadow: 0 0px 2px rgb(124, 115, 105);
+  border-radius: 5px;
+  padding: 2px;
+  margin: 3px;
+}
+
+.p-form-diet{
+  border: 2px solid rgb(124, 115, 105);
+  box-shadow: 0 0px 2px rgb(124, 115, 105);
+  border-radius: 5px;
+  padding: 2px;
+  margin: 3px;
+}
+
+.p-form-medical{
+  border: 2px solid rgb(124, 115, 105);
+  box-shadow: 0 0px 2px rgb(124, 115, 105);
+  border-radius: 5px;
+  padding: 2px;
+  margin: 3px;
+}
+
+.form-name{
+  align-items: end;
+}
+
+.form-image{
+  align-items: end;
+}
+
+.form-age{
+  align-items: end;
+}
+
+.form-breed{
+  align-items: end;
+}
+
+.form-hair{
+  align-items: end;
+}
+
+.form-chip{
+  align-items: end;
+}
+
+.form-sex{
+  align-items: end;
+}
+
+.form-size{
+  align-items: end;
+}
+
+.form-weight{
+  align-items: end;
+}
+
+.form-description{
+  align-items: end;
+}
+
+.form-diet{
+  align-items: end;
+}
+
+.form-medical{
+  align-items: end;
+}
+
+.form-pet-name{
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-pet-image{
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-pet-age{
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-pet-breed{
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-pet-hair{
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-pet-chip{
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-pet-sex{
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-pet-size{
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-pet-weight{
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-pet-description{
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-pet-diet{
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-pet-medical{
+  display: flex;
+  justify-content: space-between;
+}
+
+.p-name{
+  border: 2px solid rgb(20, 14, 35);
+  box-shadow: 0 0px 4px rgb(13, 9, 23);
+  border-radius: 7px;
+}
+
+.p-image{
+
+}
+
+.p-age{
+
+}
+
+.p-breed{
+  
+}
+
+.p-hair{
+
+}
+
+.p-chip{
+ 
+}
+
+.p-sex{
+  
+}
+
+.p-size{
+
+}
+
+.p-weight{
+  
+}
+
+.p-description{
+  
+}
+
+.p-diet{
+  
+}
+
+.p-medical{
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*.pets-button{
   color: rgb(53, 39, 26);
