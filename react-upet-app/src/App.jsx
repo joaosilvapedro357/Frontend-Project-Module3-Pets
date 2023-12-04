@@ -13,6 +13,7 @@ import AdoptPage from './pages/AdoptPage';
 import UserPage from './pages/UserPage';
 import Navbar from './Components/Navbar';
 import Sidebar from './Components/Sidebar';
+import AddPetMenu from './Components/addPetMenu';
 
 
 
@@ -21,6 +22,7 @@ function App() {
   return (
       <div>
         <Navbar/>
+        <AddPetMenu/>
          <Routes>
           <Route path="/signup" element={<SignUpPage />} />
           <Route path="/login" element={<LoginPage />} />
