@@ -2,7 +2,7 @@ import { useState } from "react";
 
 function AddPetMenu() {
 
-    const [menuOn, setMenuOn] = useState(true);
+    const [menuOn, setMenuOn] = useState(false);
 
     const toggleMenu = () =>{
         setMenuOn(!menuOn);
@@ -13,10 +13,9 @@ function AddPetMenu() {
         <button className="menu-button" onClick={toggleMenu}>Add +</button>
         {menuOn && (
             <ul className='add-menu'>
-                <h2>ola</h2>
+                <p>Insert your Pet details!</p>
             </ul>
         )}
-        <h2>Insert your Pet details!</h2>
     </div>
   )
 };

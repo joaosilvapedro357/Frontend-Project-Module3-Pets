@@ -29,8 +29,6 @@ function AdoptPage() {
 
   const [myPetDetails, setMyPetDetails] = useState([]);
 
-  const navigate = useNavigate();
-
   const getAllPets = () =>{
     axios.get(`${BACKEND_URL}/dogs`)
   .then((response) => {
@@ -147,7 +145,7 @@ return (
       </label>
       <img className="adopt-apamg-image" src="/images/apamg-png.webp" />
         {/*<Link to="/pets" className="adopt-button"> Apply </Link>*/}
-      < button type="submit">Submit</button>
+      <button type="submit">Submit</button>
     </form>
     <div>
     {myPetDetails.map((pet) => (

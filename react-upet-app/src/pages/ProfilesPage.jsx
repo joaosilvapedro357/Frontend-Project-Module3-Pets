@@ -22,6 +22,7 @@ function ProfilesPage() {
   const [description, setDescription] = useState('');
   const [diet, setDiet] = useState('');
   const [medicalRecord, setMedicalRecord] = useState('');
+  const [typeOfPet, setTypeOfPet] = useState('');
 
   const [myPetDetails, setMyPetDetails] = useState([]);
 
@@ -43,6 +44,7 @@ function ProfilesPage() {
   }
 
   const handleSubmit = (e) => {
+    let typeOfPet = 'dog';
     e.preventDefault();
     // Call the onSubmit function passed from the parent component
     const requestBody = {
@@ -57,8 +59,11 @@ function ProfilesPage() {
       weight,
       description,
       diet,
-      medicalRecord
+      medicalRecord, 
+      typeOfPet
     }
+
+    console.log('handling submit');
 
     // In the url we can use 'http://localhost:${PORT}' as well.
     axios.post(`${BACKEND_URL}/dog`, requestBody)
@@ -125,11 +130,19 @@ const deletePet = () =>{
           </label>
           <label className="form-pet-medical"><p className="p-form-medical"> Medical Record: </p><input className="form-medical" type="text" name="medicalRecord" value={medicalRecord} onChange={(e) => setMedicalRecord(e.target.value)} />
         </label>
+        <label className="form-pet-medical"><p className="p-form-medical"> Type of Pet:</p><select value={typeOfPet} onChange={(e) => setTypeOfPet(e.target.value)}><option>
+        Dog</option>
+        <option>
+        Cat</option>
+        <option>
+        Other Pet</option></select>
+        </label>
+
         </div>
-      </form>
-      <div className="add-buton">
+        <div className="add-buton">
           < button type="submit">Submit</button>
         </div>
+      </form>
       <div className="pet-details">
       {myPetDetails.map((pet) => (
         <div className="pet-details-info" key={pet._id}>
