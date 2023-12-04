@@ -21,7 +21,7 @@ function EditPetPage() {
   const [medicalRecord, setMedicalRecord] = useState('');
   const [typeOfPet, setTypeOfPet] = useState('');
 
-    const {dogId} = useParams();
+    const dogId = _id;
     const navigate = useNavigate();
 
 
@@ -46,14 +46,24 @@ function EditPetPage() {
 
     }, []);
 
+    useEffect(()=>{
+      axios.get(`${BACKEND_URL}/dogs/${dogId}`).then((response)=>{
+          const onePet = response.data;
+          setName(onePet.name);
+          setDescription(onePet.description);
+      })
+      .catch((error)=> console.log(error));
+
+  }, []);
+
     const handleSubmit = (e) =>{
         e.preventDefault();
 
         const requestBody = {name, image, age, breed, hairType, chipId, sex, size, weight,
           description, diet, medicalRecord};
 
-        axios.put(`${API_URL}/projects/${projectId}`, requestBody).then(()=>{
-            navigate(`/projects/${projectId}`);
+        axios.put(`${BACKEND_URL}/dogs/${dogId}`, requestBody).then(()=>{
+            navigate(`/pets/${dogId}`);
 
         })
         .catch((error)=> console.log(error));
