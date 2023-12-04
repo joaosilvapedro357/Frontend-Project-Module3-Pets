@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useState } from 'react';
 import {useNavigate} from 'react-router-dom'
 
-const BACKEND_URL = 'http://localhost:3000/';
+const BACKEND_URL = 'http://localhost:3000';
 
 function SignUpPage() {
 

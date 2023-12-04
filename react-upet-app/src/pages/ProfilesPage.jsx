@@ -1,14 +1,10 @@
-import { useState } from "react";
+import axios from 'axios'
+import { useEffect, useState } from 'react'
 import { Link, useParams } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
-import axios from "axios";
-import { useEffect, navigate } from "react";
 
-//const PORT = 3000;
-const BACKEND_URL = 'http://localhost:3000/api'; /* it is api because we defined it 
-like that in the routes */
+const BACKEND_URL = 'http://localhost:3000';
 
-function ProfilesPage() {
+function PetListPage (){
 
   const [name, setName] = useState('');
   const [age, setAge] = useState('');
@@ -24,49 +20,47 @@ function ProfilesPage() {
   const [medicalRecord, setMedicalRecord] = useState('');
   const [typeOfPet, setTypeOfPet] = useState('');
 
-  const [myPetDetails, setMyPetDetails] = useState([]);
-
-  const navigate = useNavigate();
-
   const {dogId} = useParams();
+    /* Creation of State Values demands a variable that displays the
+    information (in this case is projects) +a function that updates
+     the value (in the case is setProjects). The naming of these two 
+     is subjective and up to you */
+    
+    const [pets, setPets] = useState(['']);
 
-  const getAllPets = () =>{
-    axios.get(`${BACKEND_URL}/dogs`)
-  .then((response) => {
-    // Check if the array is not empty before accessing its first element
-    // Access the title property from the first item in the array
-    setMyPetDetails(response.data);
-  })
-  .catch((error) => {
-    console.error("Error fetching pet details:", error);
-    // Handle the error and display an error message
-  });
-  }
+    /* useEffect with an empty array will create 
+    side-effects when the component is rendered initially */
 
-  const handleSubmit = (e) => {
-    let typeOfPet = 'dog';
-    e.preventDefault();
-    // Call the onSubmit function passed from the parent component
-    const requestBody = {
-      name,
-      age,
-      image,
-      breed,
-      hairType,
-      chipId,
-      sex,
-      size,
-      weight,
-      description,
-      diet,
-      medicalRecord, 
-      typeOfPet
-    }
+    useEffect(()=>{
+        axios.get(`${BACKEND_URL}/dogs?_embed=tasks`).then((response)=>{
+            setPets(response.data);
+        })
 
-    console.log('handling submit');
+        .catch((error)=> console.log(error));
 
-    // In the url we can use 'http://localhost:${PORT}' as well.
-    axios.post(`${BACKEND_URL}/dog`, requestBody)
+    }, []);
+
+    const handleSubmit = (e) => {
+      let typeOfPet = 'dog';
+      e.preventDefault();
+      // Call the onSubmit function passed from the parent component
+      const requestBody = {
+        name,
+        age,
+        image,
+        breed,
+        hairType,
+        chipId,
+        sex,
+        size,
+        weight,
+        description,
+        diet,
+        medicalRecord, 
+        typeOfPet
+      }
+
+      axios.post(`${BACKEND_URL}/dog`, requestBody)
     .then(() => {
         getAllPets();
         setName('');
@@ -88,18 +82,8 @@ function ProfilesPage() {
     });
 };
 
-useEffect(() => {
-  getAllPets();
-}, []); 
-
-const deletePet = () =>{
-  axios.delete(`${BACKEND_URL}/dogs/:${dogId}`).then(()=>{
-      navigate("/pets");
-  })
-  .catch((error)=> console.log(error));
-}
-
-  return ( 
+    return(
+        
     <div className="pets-page">
       <h1 className="pets-title">My Pets</h1>
       <h2 className="Petspage-description">Access your pets Informations</h2>
@@ -143,28 +127,20 @@ const deletePet = () =>{
           < button type="submit">Submit</button>
         </div>
       </form>
-      <div className="pet-details">
-      {myPetDetails.map((pet) => (
-        <div className="pet-details-info" key={pet._id}>
-          <p className="p-name">Name: {pet.name}</p>
-          <img src={pet.image} alt="Pet Image" />
-          <p className="p-age"> Age: {pet.age}</p>
-          <p className="p-breed"> Breed: {pet.breed}</p>
-          <p className="p-hair"> Hair Type: {pet.hairType}</p>
-          <p className="p-chip"> ChipId: {pet.chipId}</p>
-          <p className="p-sex"> Sex: {pet.sex}</p>
-          <p className="p-size"> Size: {pet.size}</p>
-          <p className="p-weight"> Weight: {pet.weight}</p>
-          <p className="p-description"> Description: {pet.description}</p>
-          <p className="p-diet"> Diet: {pet.diet}</p>
-          <p className="p-medical"> Medical Record: {pet.medicalRecord}</p>
-          <button className="petpage-button" onClick={deletePet}> Delete </button>
+      {pets.map((pet)=>{
+          return (
+            <div className = "dog-list" key={pet.id}>
+                <Link to={`/pets/${pet.id}`}>
+                  <h3>{pets.name}</h3>
+                </Link>
+            </div>
+                )
+            })}
+            <Link to = "/pets">Back</Link>
+        <Link to={`/pets/edit/${dogId}`}> Edit Pet</Link>
         </div>
-          ))}
-      </div>
-    </div>
-  ) 
+    )
+
 }
 
-export default ProfilesPage;
-
+export default PetListPage
