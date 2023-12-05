@@ -19,7 +19,7 @@ function Sidebar() {
             to="/user"
             className={location.pathname === "/user" ? "active" : ""}
           >
-            User Profile
+            User
           </Link>
         </li>
       </ul>

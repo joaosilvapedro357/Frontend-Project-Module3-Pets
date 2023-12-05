@@ -16,10 +16,15 @@ import Sidebar from './Components/Sidebar';
 import AddPetMenu from './Components/addPetMenu';
 
 function App() {
+
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   
   return (
       <div>
-        <Navbar/>
+        <Navbar toggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)} />
+        {isSidebarOpen && <Sidebar />}
+        <div className={`content ${isSidebarOpen ? 'shifted' : ''}`}>
+
          <Routes>
           <Route path="/signup" element={<SignUpPage />} />
           <Route path="/login" element={<LoginPage />} />
@@ -31,6 +36,7 @@ function App() {
           <Route path="/adopt" element={<AdoptPage />} />
           <Route path="/user" element={<UserPage />} />
         </Routes>
+        </div>
       </div>
   )
 }
