@@ -4,28 +4,20 @@ function Sidebar() {
   const location = useLocation();
 
   return (
-    <div className="sidebar bg-white text-black p-4">
+    <div className="sidebar">
       <ul>
         <li>
           <Link
-            to="/dashboard"
-            className={location.pathname === "/dashboard" ? "active" : ""}
+            to="/pets"
+            className={location.pathname === "/pets" ? "active" : ""}
           >
-            Cohorts
+            Pets
           </Link>
         </li>
         <li>
           <Link
-            to="/students"
-            className={location.pathname === "/students" ? "active" : ""}
-          >
-            Students
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/profile"
-            className={location.pathname === "/profile" ? "active" : ""}
+            to="/user"
+            className={location.pathname === "/user" ? "active" : ""}
           >
             User Profile
           </Link>
