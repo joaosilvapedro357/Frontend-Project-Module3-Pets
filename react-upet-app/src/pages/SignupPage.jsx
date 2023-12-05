@@ -34,7 +34,6 @@ function SignUpPage() {
                 const errorDescription = error.response.data.message;
                 setError(errorDescription);
             })
-
     }
     
   return (
@@ -82,4 +81,4 @@ function SignUpPage() {
   )
 }
 
-export default SignUpPage
+export default SignUpPage;

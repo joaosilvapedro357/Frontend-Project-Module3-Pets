@@ -15,8 +15,6 @@ import Navbar from './Components/Navbar';
 import Sidebar from './Components/Sidebar';
 import AddPetMenu from './Components/addPetMenu';
 
-
-
 function App() {
   
   return (
@@ -35,7 +33,6 @@ function App() {
           <Route path="/user" element={<UserPage />} />
         </Routes>
       </div>
-    
   )
 }
 

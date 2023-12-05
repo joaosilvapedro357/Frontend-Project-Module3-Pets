@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 
 const BACKEND_URL = 'http://localhost:3000/api';
 
-function PetPage (){
+function PetPage(){
     
     const [pets, setPets] = useState(['']);
 
     useEffect(()=>{
-        axios.get(`${BACKEND_URL}/dogs?_embed=tasks`).then((response)=>{
+        axios.get(`${BACKEND_URL}/dogs`).then((response)=>{
             setPets(response.data);
         })
 
@@ -21,8 +21,8 @@ function PetPage (){
         <div>
             {pets.map((pet)=>{
                 return (
-                    <div className = "pets-list" key={pet.id}>
-                        <Link to={`/pet/${pet.id}`}>
+                    <div className = "pets-list" key={pet._id}>
+                        <Link to={`/pets/${pet._id}`}>
                         <h3>{pet.name}</h3>
                         </Link>
                     </div>
@@ -30,7 +30,6 @@ function PetPage (){
             })}
         </div>
     )
-
 }
 
-export default PetPage
+export default PetPage;
