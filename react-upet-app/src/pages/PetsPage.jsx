@@ -19,28 +19,26 @@ function PetsPage(){
     }, []);
 
     return(     
-        <div>
-          <AddPetMenu/>
+        <div className='pets-page'>
+            <AddPetMenu className='pets-addpet-menu'/>
+            <h1 className="pets-title"> My Pets </h1>
+            <h3 className="pets-description"> Click your pet's name for more details </h3>
+            <div className='pets-page-scroll'>
             {pets.map((pet)=>{
                 return (
                     <div className = "pets-list" key={pet._id}>
-                        <Link to={`/pets/${pet._id}`}>
-                          <h3>{pet.name}</h3>
-                          <p>{pet.image}</p>
-                          <p>{pet.age}</p>
-                          <p>{pet.breed}</p>
-                          <p>{pet.hairType}</p>
-                          <p>{pet.chipId}</p>
-                          <p>{pet.sex}</p>
-                          <p>{pet.size}</p>
-                          <p>{pet.weight}</p>
-                          <p>{pet.description}</p>
-                          <p>{pet.diet}</p>
-                          <p>{pet.medicalRecord}</p>
-                        </Link>
+                        <Link className="pet-name-link" to={`/pets/${pet._id}`}>
+                          <h2>{pet.name}</h2>
+                          </Link>
+                          <div className='pets-info' >
+                            <p>{pet.image}</p>
+                            <p>{pet.chipId}</p>
+                            <p>{pet.description}</p>
+                          </div>
                     </div>
                 )
             })}
+            </div>
         </div>
     )
 }

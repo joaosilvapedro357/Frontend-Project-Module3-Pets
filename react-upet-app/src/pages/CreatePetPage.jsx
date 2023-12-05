@@ -68,10 +68,12 @@ function CreatePetPage() {
   };
 
   return (
-    <div className="pets-page">
-      <h1 className="pets-title">My Pets</h1>
-      <h2 className="Petspage-description">Access your pets Informations</h2>
-      <form onSubmit={handleSubmit} className="pets-create">
+    <div className="create-page">
+      <h1 className="create-title"> Add My Pet </h1>
+      <h2 className="createpage-description"> Add your Pet's info and ID </h2>
+      <form onSubmit={handleSubmit} className="pets-create-form">
+      <div className="creatediv-column">
+        <div className="pets-create">
         <div className="pet-create1">
           <label className="form-pet-name">
             <p className="p-form-name"> Name: </p>
@@ -146,8 +148,10 @@ function CreatePetPage() {
             </select>
           </label>
         </div>
+        </div>
         <div className="add-buton">
-          < button type="submit">Submit</button>
+          < button type="submit">Add</button>
+        </div>
         </div>
       </form>
     </div>

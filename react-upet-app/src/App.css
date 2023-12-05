@@ -126,12 +126,12 @@ body{
 
 .menu{
   display: flex;
-  
+  flex-direction: column;
 }
 
 .menu-button{
   display: flex;
-  margin-top: 50px;
+  margin-top: 0px;
   color: rgb(53, 39, 26);
   font-weight: bold;
   border: 1px solid rgb(53, 39, 26);
@@ -226,11 +226,6 @@ body{
 
 /* - Pets Page ------------------------------------------------------------------------*/
 
-.pets-create{
-  margin-top:30px;
-  display: flex;
-  
-}
 .pets-page{
   color: rgb(53, 39, 26);
   margin-top: 0;
@@ -239,29 +234,129 @@ body{
   align-items: center;
   justify-content: center;
   /*max-width: 850px;*/
-}
+}/* ! */
 
-.add-buton{
-  margin-top: 20px;;
+.pets-addpet-menu{
 }
 
 .pets-title{
-  margin-top: 25px;
+  margin-top: 30px;
 }
 
-.pet-details{
+.pets-description{
+  margin-top: -20px;
+  margin-bottom: 30px;
+}
+
+.pets-page-scroll{
+  border: 1px solid rgb(239,223, 204);
+  background-color: transparent;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgb(154, 144, 133);
+  overflow-y: scroll;
+  height: 380px
+}
+
+/*.pets-page-scroll::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+  border-radius: 6px;
+}*/
+
+.pets-list{
   margin-left: 10px;
   margin-top: 50px;
 }
 
-.pet-details-info{
+.pet-name-link{
+  color:  rgb(109, 160, 31);
+  font-weight: bold;
+}
+
+.pet-name-link:hover{
+  color: rgb(153, 115, 236);
+}
+
+.pets-info{
   border: 2px solid rgb(124, 115, 105);
   box-shadow: 0 0px 2px rgb(124, 115, 105);
   border-radius: 15px;
   padding: 2px;
   margin: 3px;
   width: 500px;
-  margin-top: 30px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+/*.petpage-button{
+  margin-bottom: 20px;
+}*/
+
+/* - Pet Profile Page ------------------------------------------------------------------------*/
+
+.pet-profile-page{
+  color: rgb(53, 39, 26);
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.prof-page-description{
+  margin-top: 120px;
+}
+
+.p-name{
+  padding: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 5px;
+  /*border: 2px solid rgb(20, 14, 35);
+  box-shadow: 0 0px 4px rgb(13, 9, 23);
+  border-radius: 7px;*/
+}
+
+/* - Create Page ------------------------------------------------------------------------*/
+
+.create-page{
+  color: rgb(53, 39, 26);
+  margin-top: -50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /*max-width: 850px;*/
+}
+
+.pets-create-form{
+  margin-top: 0px;
+  display: flex;
+}
+
+.pets-create{
+  display: flex;
+}
+
+.add-buton{
+  margin-top: 45px;
+}
+
+.create-title{
+  margin-top: 0px;
+}
+
+.createpage-description{
+  margin-top: -20px;
+  margin-bottom: 50px;
+}
+
+.creatediv-column{
+  display: flex;
+  flex-direction: column;
 }
 
 .pet-create1{
@@ -279,10 +374,6 @@ body{
   width: 280px;
   align-items: stretch;
   margin-left: 30px;
-}
-
-.petpage-button{
-  margin-bottom: 20px;
 }
 
 .p-form-name{
@@ -489,71 +580,6 @@ body{
   display: flex;
   justify-content: space-between;
 }
-
-.p-name{
-  border: 2px solid rgb(20, 14, 35);
-  box-shadow: 0 0px 4px rgb(13, 9, 23);
-  border-radius: 7px;
-}
-
-.p-image{
-
-}
-
-.p-age{
-
-}
-
-.p-breed{
-  
-}
-
-.p-hair{
-
-}
-
-.p-chip{
- 
-}
-
-.p-sex{
-  
-}
-
-.p-size{
-
-}
-
-.p-weight{
-  
-}
-
-.p-description{
-  
-}
-
-.p-diet{
-  
-}
-
-.p-medical{
-  
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*.pets-button{
   color: rgb(53, 39, 26);
