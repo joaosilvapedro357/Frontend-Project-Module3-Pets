@@ -21,25 +21,25 @@ function EditPetPage() {
   const [medicalRecord, setMedicalRecord] = useState('');
   const [typeOfPet, setTypeOfPet] = useState('');
 
-    const {petId}=useParams();
+    const {petId} = useParams();
     const navigate = useNavigate();
 
 
     useEffect(()=>{
-        axios.get(`${BACKEND_URL}/dogs/${petId}`).then((response)=>{
-            const oneDog = response.data;
-            setName(oneDog.name);
-            setImage(oneDog.image);
-            setAge(oneDog.age);
-            setBreed(oneDog.breed);
-            setHairType(oneDog.hairType);
-            setChipId(oneDog.chipId);
-            setSex(oneDog.sex);
-            setSize(oneDog.size);
-            setWeight(oneDog.weight);
-            setDescription(oneDog.description);
-            setDiet(oneDog.diet);
-            setMedicalRecord(oneDog.medicalRecord);
+        axios.get(`${BACKEND_URL}/pets/${petId}`).then((response)=>{
+            const onePet = response.data;
+            setName(onePet.name);
+            setImage(onePet.image);
+            setAge(onePet.age);
+            setBreed(onePet.breed);
+            setHairType(onePet.hairType);
+            setChipId(onePet.chipId);
+            setSex(onePet.sex);
+            setSize(onePet.size);
+            setWeight(onePet.weight);
+            setDescription(onePet.description);
+            setDiet(onePet.diet);
+            setMedicalRecord(onePet.medicalRecord);
         })
 
         .catch((error)=> console.log(error));
@@ -47,7 +47,7 @@ function EditPetPage() {
     }, []);
 
     useEffect(()=>{
-      axios.get(`${BACKEND_URL}/dogs/${petId}`).then((response)=>{
+      axios.get(`${BACKEND_URL}/pets/${petId}`).then((response)=>{
           const onePet = response.data;
           setName(onePet.name);
           setDescription(onePet.description);
@@ -63,16 +63,16 @@ function EditPetPage() {
         const requestBody = {name, image, age, breed, hairType, chipId, sex, size, 
           weight, description, diet, medicalRecord};
 
-        axios.put(`${BACKEND_URL}/dogs/${petId}`, requestBody).then(()=>{
+        axios.put(`${BACKEND_URL}/pets/${petId}`, requestBody).then(()=>{
             navigate(`/pets/${petId}`);
-
         })
 
         .catch((error)=> console.log(error));
     }
 
     const deletePet = () =>{
-        axios.delete(`${BACKEND_URL}/dogs/${petId}`).then(()=>{
+      
+        axios.delete(`${BACKEND_URL}/pets/${petId}`).then(()=>{
             navigate("/pets");
         })
 

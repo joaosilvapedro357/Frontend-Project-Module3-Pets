@@ -5,8 +5,8 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import HomePage from './Pages/HomePage';
 import SignUpPage from './Pages/SignUpPage';
 import LoginPage from './Pages/LoginPage';
-import ProfilesPage from "./Pages/ProfilesPage";
-import PetPage from './Pages/PetPage';
+import PetProfilePage from "./Pages/PetProfilePage";
+import PetsPage from './Pages/PetsPage';
 import EditPetPage from './Pages/EditPetPage';
 import CreatePetPage from './Pages/CreatePetPage';
 import AdoptPage from './Pages/AdoptPage';
@@ -20,13 +20,12 @@ function App() {
   return (
       <div>
         <Navbar/>
-        <AddPetMenu/>
          <Routes>
           <Route path="/signup" element={<SignUpPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/" element={<HomePage />} />
-          <Route path="/pets" element={<PetPage />} />
-          <Route path="/pets/:petId" element={<ProfilesPage />} />
+          <Route path="/pets" element={<PetsPage />} />
+          <Route path="/pets/:petId" element={<PetProfilePage/>} />
           <Route path="/pets/:petId/edit" element={<EditPetPage />} />
           <Route path="/pets/add" element={<CreatePetPage />} />
           <Route path="/adopt" element={<AdoptPage />} />

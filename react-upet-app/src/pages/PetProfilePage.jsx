@@ -4,13 +4,13 @@ import { useEffect, useState } from "react";
 
 const BACKEND_URL = 'http://localhost:3000/api';
 
-function ProfilesPage() {
+function PetProfilePage() {
     
     const {petId} = useParams();
     const [pet, setPet] = useState();
 
     useEffect(()=>{
-        axios.get(`${BACKEND_URL}/dogs/${petId}`).then((response)=>{
+        axios.get(`${BACKEND_URL}/pets/${petId}`).then((response)=>{
             const onePet = response.data;
             setPet(onePet);
         })
@@ -22,7 +22,11 @@ function ProfilesPage() {
     <div>
         {pet && (
             <div>
-                <p>{pet.name}</p>
+                <h3>{pet.name}</h3>
+                <p>{pet.image}</p>
+                <p>{pet.age}</p>
+                <p>{pet.breed}</p>
+                <p>{pet.hairType}</p>
                 <p>{pet.description}</p>
             </div>
         )}
@@ -31,4 +35,4 @@ function ProfilesPage() {
   )
 }
 
-export default ProfilesPage;
+export default PetProfilePage

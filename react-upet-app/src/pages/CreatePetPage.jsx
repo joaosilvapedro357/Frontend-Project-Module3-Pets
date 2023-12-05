@@ -22,7 +22,7 @@ function CreatePetPage() {
 
     const navigate = useNavigate;
     const handleSubmit = (e) => {
-      let typeOfPet = 'dog';
+      //let typeOfPet = 'dog';
       e.preventDefault();
       // Call the onSubmit function passed from the parent component
       const requestBody = {
@@ -44,7 +44,7 @@ function CreatePetPage() {
       console.log('handling submit');
   
       // In the url we can use 'http://localhost:${PORT}' as well.
-      axios.post(`${BACKEND_URL}/dog`, requestBody)
+      axios.post(`${BACKEND_URL}/pet`, requestBody)
       .then(() => {
           getAllPets();
           setName('');

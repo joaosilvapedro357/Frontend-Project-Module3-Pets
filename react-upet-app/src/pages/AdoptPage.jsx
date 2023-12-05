@@ -30,7 +30,7 @@ function AdoptPage() {
   const [myPetDetails, setMyPetDetails] = useState([]);
 
   const getAllPets = () =>{
-    axios.get(`${BACKEND_URL}/dogs`)
+    axios.get(`${BACKEND_URL}/pets`)
   .then((response) => {
     // Check if the array is not empty before accessing its first element
     // Access the title property from the first item in the array
@@ -66,7 +66,7 @@ function AdoptPage() {
     }
 
     // In the url we can use 'http://localhost:${PORT}' as well.
-    axios.post(`${BACKEND_URL}/dog`, requestBody)
+    axios.post(`${BACKEND_URL}/pet`, requestBody)
     .then(() => {
         getAllPets();
         setName('');
