@@ -70,7 +70,7 @@ function CreatePetPage() {
   return (
     <div className="create-page">
       <h1 className="create-title"> Add My Pet </h1>
-      <h2 className="createpage-description"> Add your Pet's info and ID </h2>
+      <h2 className="createpage-description"> Add your Pet's info and Id </h2>
       <form onSubmit={handleSubmit} className="pets-create-form">
       <div className="creatediv-column">
         <div className="pets-create">

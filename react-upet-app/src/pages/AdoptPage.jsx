@@ -70,7 +70,7 @@ function AdoptPage() {
     .then(() => {
         getAllPets();
         setName('');
-        setAnimal("");
+        setAnimal('');
         setAge('');
         setImage('');
         setBreed('');
@@ -95,76 +95,106 @@ useEffect(() => {
 }, []); 
 
 return ( 
-  <div>
-    <form onSubmit={handleSubmit} className="pets-create">
-      <label> Name:
-        <input type="text" name="name" value={name} 
-      onChange={(e)=>setName(e.target.value)}/>
+  <div className="adopt-page">
+    <h1 className="adopt-title"> Want a new friend?</h1>
+    <h3 className="adopt-descr"> These pets need a new home</h3>
+    <img className="adopt-apamg-image" src="/images/apamg-png.webp" />
+    <div className="adopt-create-form">
+    <form onSubmit={handleSubmit} className="adopt-form">
+    <div className="createadopt-column">
+    <div className="adopt-create">
+      <div className="adopt-create1">
+      <label className="form-adopt-name">
+            <p className="adopt-form-name"> Name: </p>
+            <input className="a-form-name" type="text" name="name" value={name} 
+            onChange={(e)=>setName(e.target.value)}/>
       </label>
-      <label> Animal:
-        <input type="text" name="animal" value={animal} 
-      onChange={(e)=>setAnimal(e.target.value)}/>
+      <label className="form-adopt-animal">
+            <p className="adopt-form-animal"> Animal: </p>
+            <input className="a-form-animal" type="text" name="animal" value={animal} 
+            onChange={(e)=>setAnimal(e.target.value)}/>
       </label>
-      <label> Image:
-        <input type="text" name="image" value={image} 
-      onChange={(e) => setImage(e.target.value)}/>
+      <label className="form-adopt-image">
+            <p className="adopt-form-image"> Image: </p>
+            <input className="a-form-image" type="text" name="image" value={image} 
+            onChange={(e)=>setImage(e.target.value)}/>
       </label>
-      <label> Age:
-        <input type="text" name="age" value={age} 
-      onChange={(e) => setAge(e.target.value)}/>
+      <label className="form-adopt-age">
+            <p className="adopt-form-age"> Age: </p>
+            <input className="a-form-age" type="text" name="age" value={age} 
+            onChange={(e)=>setAge(e.target.value)}/>
       </label>
-      <label> Breed:
-        <input type="text" name="breed" value={breed} 
-      onChange={(e) => setBreed(e.target.value)}/>
+      <label className="form-adopt-breed">
+            <p className="adopt-form-breed"> Breed: </p>
+            <input className="a-form-breed" type="text" name="breed" value={breed} 
+            onChange={(e)=>setBreed(e.target.value)}/>
       </label>
-      <label> HairType:
-        <input type="text" name="hairType" value={hairType} 
-      onChange={(e) => setHairType(e.target.value)}/>
+      <label className="form-adopt-hair">
+            <p className="adopt-form-hair"> Hair Type: </p>
+            <input className="a-form-hair" type="text" name="animal" value={hairType} 
+            onChange={(e)=>setHairType(e.target.value)}/>
       </label>
-      <label> ChipId:
-        <input type="text" name="chipId" value={chipId} 
-      onChange={(e) => setChipId(e.target.value)}/>
+      <label className="form-adopt-chip">
+            <p className="adopt-form-chip"> Chip Id: </p>
+            <input className="a-form-chip" type="text" name="chipId" value={chipId} 
+            onChange={(e)=>setChipId(e.target.value)}/>
       </label>
-      <label> Sex:
-        <input type="text" name="sex" value={sex} 
-      onChange={(e) => setSex(e.target.value)}/>
+      <label className="form-adopt-sex">
+            <p className="adopt-form-sex"> Sex: </p>
+            <input className="a-form-sex" type="text" name="sex" value={sex} 
+            onChange={(e)=>setHairSex(e.target.value)}/>
       </label>
-      <label> Size:
-        <input type="text" name="size" value={size} 
-      onChange={(e) => setSize(e.target.value)}/>
+      </div>
+      <div className="adopt-create2">
+      <label className="form-adopt-size">
+            <p className="adopt-form-size"> Size: </p>
+            <input className="a-form-size" type="text" name="size" value={size} 
+            onChange={(e)=>setHairSize(e.target.value)}/>
       </label>
-      <label> Weight:
-        <input type="text" name="weight" value={weight} 
-      onChange={(e) => setWeight(e.target.value)}/>
+      <label className="form-adopt-weight">
+            <p className="adopt-form-weight"> Weight: </p>
+            <input className="a-form-weight" type="text" name="weight" value={weight} 
+            onChange={(e)=>setWeight(e.target.value)}/>
       </label>
-      <label> Description:
-        <input type="text" name="description" value={description} 
-      onChange={(e) => setDescription(e.target.value)}/>
+      <label className="form-adopt-description">
+            <p className="adopt-form-description"> Description: </p>
+            <input className="a-form-description" type="text" name="description" value={description} 
+            onChange={(e)=>setDescription(e.target.value)}/>
       </label>
-      <label> Diet:
-        <input type="text" name="diet" value={diet} 
-      onChange={(e) => setDiet(e.target.value)}/>
+      <label className="form-adopt-diet">
+            <p className="adopt-form-diet"> Diet: </p>
+            <input className="a-form-diet" type="text" name="diet" value={diet} 
+            onChange={(e)=>setDiet(e.target.value)}/>
       </label>
-      <label> Medical Record:
-        <input type="text" name="medicalRecord" 
-      value={medicalRecord} onChange={(e) => setMedicalRecord(e.target.value)}/>
+      <label className="form-adopt-medical">
+            <p className="adopt-form-medical"> Medical Record: </p>
+            <input className="a-form-medical" type="text" name="medicalRecord" value={medicalRecord} 
+            onChange={(e)=>setMedicalRecord(e.target.value)}/>
       </label>
-      <label> Health Status:
-        <input type="text" name="healthStatus" 
-      value={healthStatus} onChange={(e) => setHealthStatus(e.target.value)}/>
+      <label className="form-adopt-health">
+            <p className="adopt-form-health"> Health Status: </p>
+            <input className="a-form-health" type="text" name="healthStatus" value={healthStatus} 
+            onChange={(e)=>setHealthStatus(e.target.value)}/>
       </label>
-      <label> Location:
-        <input type="text" name="location" 
-      value={location} onChange={(e) => setLocation(e.target.value)}/>
+      <label className="form-adopt-location">
+            <p className="adopt-form-location"> Location: </p>
+            <input className="a-form-location" type="text" name="location" value={location} 
+            onChange={(e)=>setLocation(e.target.value)}/>
       </label>
-      <label> Associaton Name:
-        <input type="text" name="associationName" 
-      value={associationName} onChange={(e) => setAssociationName(e.target.value)}/>
+      <label className="form-adopt-association">
+            <p className="adopt-form-association"> Association: </p>
+            <input className="a-form-association" type="text" name="associationName" value={associationName} 
+            onChange={(e)=>setAssociationName(e.target.value)}/>
       </label>
-      <img className="adopt-apamg-image" src="/images/apamg-png.webp" />
+      </div>
         {/*<Link to="/pets" className="adopt-button"> Apply </Link>*/}
-      <button type="submit">Submit</button>
+      </div>
+      <div className="adopt-buton">
+          < button type="submit">Add</button>
+        </div>
+      </div>
     </form>
+    </div>
     <div>
     {myPetDetails.map((pet) => (
       <div key={pet._id}>
