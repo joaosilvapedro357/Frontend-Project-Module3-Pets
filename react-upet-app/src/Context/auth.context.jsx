@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 
-const BACKEND_URL = 'http://localhost:3000';
+const BACKEND_URL = 'https://upet.adaptable.app/api';
 
 const AuthContext = React.createContext();
 

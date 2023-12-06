@@ -2,7 +2,7 @@ import { useState } from "react";
 import {useNavigate } from "react-router-dom";
 import axios from "axios";
 
-const BACKEND_URL = 'http://localhost:3000/api';
+const BACKEND_URL = 'https://upet.adaptable.app/api';
 
 function CreatePetPage() {
 

@@ -87,22 +87,24 @@ body{
 .pets-link{
   color:  rgb(53, 39, 26);
   font-weight: bold;
+  font-family: impact;
   margin-right: 10px;
 }
 
 .pets-link:hover{
-  color:  rgb(153, 115, 236);
+  color:  rgb(134, 35, 64);
 }
 
 .adopt-link{
   color:  rgb(53, 39, 26);
+  font-family: impact;
   font-weight: bold;
   margin-left: 10px;
   margin-right: 10px;
 }
 
 .adopt-link:hover{
-  color:  rgb(153, 115, 236);
+  color:  rgb(134, 35, 64);
 }
 
 /*.add-link{
@@ -112,7 +114,7 @@ body{
 }
 
 .add-link:hover{
-  color:  rgb(153, 115, 236);
+  color:  rgb(134, 35, 64);
 }*/
 
 .user-png{
@@ -132,7 +134,7 @@ body{
 }
 
 .sidebar{
-  border: 1px solid rgb(53, 39, 26);
+  border: 2px solid rgb(134, 35, 64);
   padding: 20px;
 }
 
@@ -206,13 +208,17 @@ align-items: start;
   color: rgb(53, 39, 26);
   margin-top: -20px;
   margin-bottom: 0px;
-  
+  font-family: impact;
+  font-size: 110px;
 }
 
 .home-description{
-  color: rgb(53, 39, 26);
+  color: rgb(134, 35, 64);
   margin-bottom: 20px;
   margin-top: 5px;
+  font-family: impact;
+  font-size: 35px;
+  font-stretch: expanded;
 }
 
 .home-buttons{
@@ -223,6 +229,7 @@ align-items: start;
 .home-pets-button{
   color: rgb(53, 39, 26);
   font-weight: bold;
+  font-family: impact;
   border: 1px solid rgb(124, 115, 105);
   background-color: transparent;
   padding-left: 10px;
@@ -236,7 +243,7 @@ align-items: start;
 
 .home-adopt-button{
   color: rgb(53, 39, 26);
-  font-weight: bold;
+  font-family: impact;
   border: 1px solid rgb(124, 115, 105);
   background-color: transparent;
   padding-left: 17px;
@@ -249,11 +256,11 @@ align-items: start;
 }
 
 .home-pets-button:hover{
-  color: rgb(153, 115, 236);
+  color: rgb(134, 35, 64);
 }
 
 .home-adopt-button:hover{
-  color: rgb(153, 115, 236);
+  color: rgb(134, 35, 64);
 }
 
 /* - Pets Page ------------------------------------------------------------------------*/
@@ -282,7 +289,7 @@ align-items: start;
 }
 
 .pets-addpet-menu:hover{
-  color: rgb(153, 115, 236);
+  color: rgb(134, 35, 64);
 }
 
 .pets-title{
@@ -323,7 +330,7 @@ align-items: start;
 }
 
 .pet-name-link:hover{
-  color: rgb(153, 115, 236);
+  color: rgb(134, 35, 64);
 }
 
 .pets-info{
@@ -415,11 +422,11 @@ align-items: start;
 }
 
 .prof-link-edit:hover{
-  color: rgb(153, 115, 236);
+  color: rgb(134, 35, 64);
 }
 
 .prof-link-back:hover{
-  color: rgb(153, 115, 236);
+  color: rgb(134, 35, 64);
 }
 
 /* - Create Page ------------------------------------------------------------------------*/
@@ -1056,7 +1063,7 @@ align-items: start;
 }
 
 .adopt-button:hover{
-  color: rgb(153, 115, 236);
+  color: rgb(134, 35, 64);
 }
 
 .adopt-apamg-image{

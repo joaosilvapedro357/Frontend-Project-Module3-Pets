@@ -5,7 +5,7 @@ import axios from "axios";
 import { useEffect, navigate } from "react";
 
 //const PORT = 3000;
-const BACKEND_URL = 'http://localhost:3000/api'; /* it is api because we defined it 
+const BACKEND_URL = 'https://upet.adaptable.app/api'; /* it is api because we defined it 
 like that in the routes */
 
 function AdoptPage() {

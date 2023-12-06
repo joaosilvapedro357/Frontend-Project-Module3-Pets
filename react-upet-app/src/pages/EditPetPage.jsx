@@ -3,7 +3,7 @@ import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 
 
-const BACKEND_URL = 'http://localhost:3000/api';
+const BACKEND_URL = 'https://upet.adaptable.app/api';
 
 function EditPetPage() {
 

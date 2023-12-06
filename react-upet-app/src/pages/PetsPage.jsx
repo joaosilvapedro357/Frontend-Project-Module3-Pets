@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import AddPetMenu from '../Components/addPetMenu';
 
-const BACKEND_URL = 'http://localhost:3000/api';
+const BACKEND_URL = 'https://upet.adaptable.app/api';
 
 function PetsPage(){
     

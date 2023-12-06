@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom"
 
-function Homepage() {
+function HomePage() {
   return (
     <div className="home-page">
-        <h1 className="home-title">UPet</h1>
+        <h1 className="home-title">upet</h1>
         <h2 className="home-description">All about pet friends</h2>
         <img className="home-image" src="/images/home-image.png" />
         <div className="home-buttons">
@@ -14,4 +14,4 @@ function Homepage() {
   )
 }
 
-export default Homepage;
+export default HomePage;

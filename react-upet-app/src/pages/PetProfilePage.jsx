@@ -2,7 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-const BACKEND_URL = 'http://localhost:3000/api';
+const BACKEND_URL = 'https://upet.adaptable.app/api';
 
 function PetProfilePage() {
     
