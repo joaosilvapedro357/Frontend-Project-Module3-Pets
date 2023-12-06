@@ -52,15 +52,12 @@ function Navbar({ toggleSidebar }) {
             </span>
           </div>
           <div className="logged-in-log-out-wrapper">
-            {isLoggedIn && (
+            {isLoggedIn?(
             <button className="log-out" onClick={logOutUser}>Log Out</button>
-            )}
-            {!isLoggedIn && location.pathname !== "/login" && location.pathname 
-            !== "/signup" && (
-            <Link to ="/login">
-              <button className="log-in">Log In</button>
-            </Link>
-            )}
+            ): (<Link to ="/login">
+            <button className="log-in">Log In</button>
+          </Link>)
+            }
         </div>
       {/* <div>
         <Link to="/" className="user-img-link"><img className="user-png" src="/images/user.png"/></Link>
