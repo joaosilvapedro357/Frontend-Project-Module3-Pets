@@ -55,4 +55,4 @@ function PetProfilePage() {
   )
 }
 
-export default PetProfilePage
+export default PetProfilePage;
