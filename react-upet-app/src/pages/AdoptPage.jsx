@@ -1,8 +1,6 @@
-import { useState } from "react";
-import { Link, useParams } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { useState, useEffect, navigate } from "react";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { useEffect, navigate } from "react";
 
 //const PORT = 3000;
 const BACKEND_URL = 'https://upet.adaptable.app/api'; /* it is api because we defined it 

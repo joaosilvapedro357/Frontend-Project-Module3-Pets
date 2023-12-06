@@ -11,7 +11,6 @@ function Navbar({ toggleSidebar }) {
   const location = useLocation();
   const { isLoggedIn, logOutUser } = useContext(AuthContext);
   
-
   const getCurrentLinkText = (pathname) => {
     const routes = {
       "/login": "",

@@ -11,9 +11,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -705,7 +707,6 @@ align-items: start;
 
 /* - Adopt Page ------------------------------------------------------------------------*/
 
-
 .adopt-page{
   color: rgb(53, 39, 26);
   margin-top: 20px;
@@ -721,7 +722,8 @@ align-items: start;
   margin-bottom: 0;
 }
 
-.adopt-descr{
+.adopt-description{
+  
 }
 
 .adopt-create{

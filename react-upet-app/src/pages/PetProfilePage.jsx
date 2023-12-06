@@ -8,9 +8,11 @@ function PetProfilePage() {
     
     const {petId} = useParams();
     const [pet, setPet] = useState();
+    const [user, setUser] = useState("");
+    const userId = useParams();
 
     useEffect(()=>{
-        axios.get(`${BACKEND_URL}/pets/${petId}`).then((response)=>{
+        axios.get(`${BACKEND_URL}/:userId/pets/${petId}`).then((response)=>{
             const onePet = response.data;
             setPet(onePet);
         })
@@ -48,8 +50,8 @@ function PetProfilePage() {
             </div>
         </div>
         <div className="profile-page-links">
-            <Link className="prof-link-edit" to={`/pets/${petId}/edit`}> Edit </Link>
-            <Link className="prof-link-back" to={`/pets/`}> Back </Link>
+            <Link className="prof-link-edit" to={`/:userId/pets/${petId}/edit`}> Edit </Link>
+            <Link className="prof-link-back" to={`/:userId/pets/`}> Back </Link>
         </div>
     </div>
   )

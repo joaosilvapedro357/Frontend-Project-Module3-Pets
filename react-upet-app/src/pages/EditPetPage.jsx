@@ -2,31 +2,34 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 
-
 const BACKEND_URL = 'https://upet.adaptable.app/api';
 
 function EditPetPage() {
 
-  const [name, setName] = useState('');
-  const [age, setAge] = useState('');
-  const [image, setImage] = useState('');
-  const [breed, setBreed] = useState('');
-  const [hairType, setHairType] = useState('');
-  const [chipId, setChipId] = useState('');
-  const [sex, setSex] = useState('');
-  const [size, setSize] = useState('');
-  const [weight, setWeight] = useState('');
-  const [description, setDescription] = useState('');
-  const [diet, setDiet] = useState('');
-  const [medicalRecord, setMedicalRecord] = useState('');
-  const [typeOfPet, setTypeOfPet] = useState('');
+  const [name, setName] = useState("");
+  const [age, setAge] = useState("");
+  const [image, setImage] = useState("");
+  const [breed, setBreed] = useState("");
+  const [hairType, setHairType] = useState("");
+  const [chipId, setChipId] = useState("");
+  const [sex, setSex] = useState("");
+  const [size, setSize] = useState("");
+  const [weight, setWeight] = useState("");
+  const [description, setDescription] = useState("");
+  const [diet, setDiet] = useState("");
+  const [medicalRecord, setMedicalRecord] = useState("");
+  const [typeOfPet, setTypeOfPet] = useState("");
+  const [user, setUser] = useState("");
+  const [userId, setUserId] = useState("");
 
-    const {petId} = useParams();
-    const navigate = useNavigate();
-
+  const {petId} = useParams();
+  const navigate = useNavigate();
 
     useEffect(()=>{
-        axios.get(`${BACKEND_URL}/pets/${petId}`).then((response)=>{
+
+      const userId = useParams();
+
+      axios.get(`${BACKEND_URL}/:userId/pets/${petId}`).then((response)=>{
             const onePet = response.data;
             setName(onePet.name);
             setImage(onePet.image);
@@ -40,6 +43,7 @@ function EditPetPage() {
             setDescription(onePet.description);
             setDiet(onePet.diet);
             setMedicalRecord(onePet.medicalRecord);
+            setUser(onePet.user);
         })
 
         .catch((error)=> console.log(error));
@@ -47,7 +51,10 @@ function EditPetPage() {
     }, []);
 
     useEffect(()=>{
-      axios.get(`${BACKEND_URL}/pets/${petId}`).then((response)=>{
+
+      const userId = useParams();
+
+      axios.get(`${BACKEND_URL}/:userId/pets/${petId}`).then((response)=>{
           const onePet = response.data;
           setName(onePet.name);
           setDescription(onePet.description);
@@ -58,12 +65,15 @@ function EditPetPage() {
   }, []);
 
     const handleSubmit = (e) =>{
-        e.preventDefault();
 
-        const requestBody = {name, image, age, breed, hairType, chipId, sex, size, 
-          weight, description, diet, medicalRecord};
+      const userId = useParams();
+      
+      e.preventDefault();
 
-        axios.put(`${BACKEND_URL}/pets/${petId}`, requestBody).then(()=>{
+      const requestBody = {name, image, age, breed, hairType, chipId, sex, size, 
+          weight, description, diet, medicalRecord, user};
+
+        axios.put(`${BACKEND_URL}/:userId/pets/${petId}`, requestBody).then(()=>{
             navigate(`/pets/${petId}`);
         })
 
@@ -71,8 +81,10 @@ function EditPetPage() {
     }
 
     const deletePet = () =>{
+
+      const userId = useParams();
       
-        axios.delete(`${BACKEND_URL}/pets/${petId}`).then(()=>{
+        axios.delete(`${BACKEND_URL}/:userId/pets/${petId}`).then(()=>{
             navigate("/pets");
         })
 
@@ -80,43 +92,43 @@ function EditPetPage() {
     }
 
     return(
-        <div>
-            <form onSubmit={handleSubmit} className="pets-create-form">
+      <div>
+        <form onSubmit={handleSubmit} className="pets-create-form">
       <div className="creatediv-column">
         <div className="pets-create">
-        <div className="pet-create1">
-          <label className="form-pet-name">
-            <p className="p-form-name"> Name: </p>
-            <input className="form-name" type="text" name="name" value={name} 
-            onChange={(e)=>setName(e.target.value)}/>
-          </label>
-          <label className="form-pet-image">
-            <p className="p-form-image"> Image: </p>
-            <input className="form-image" type="text" name="image" value={image} 
-            onChange={(e) => setImage(e.target.value)}/>
-          </label>
-          <label className="form-pet-age">
-            <p className="p-form-age"> Age: </p>
-            <input className="form-age" type="text" name="age" value={age} 
-            onChange={(e) => setAge(e.target.value)}/>
-          </label>
-          <label className="form-pet-breed">
-            <p className="p-form-breed"> Breed: </p>
-            <input className="form-breed" type="text" name="breed" value={breed} 
-            onChange={(e) => setBreed(e.target.value)}/>
-          </label>
-          <label className="form-pet-hair">
-            <p className="p-form-hair"> Hair: </p>
-            <input className="form-hair" type="text" name="hairType" value={hairType} 
-            onChange={(e) => setHairType(e.target.value)}/>
-          </label>
-          <label className="form-pet-chip">
-            <p className="p-form-chip"> Chip: </p>
-            <input className="form-chip" type="text" name="chipId" value={chipId} 
-            onChange={(e) => setChipId(e.target.value)}/>
-          </label> 
-          <br/> 
-        </div>
+          <div className="pet-create1">
+           <label className="form-pet-name">
+              <p className="p-form-name"> Name: </p>
+              <input className="form-name" type="text" name="name" value={name} 
+              onChange={(e)=>setName(e.target.value)}/>
+            </label>
+            <label className="form-pet-image">
+              <p className="p-form-image"> Image: </p>
+              <input className="form-image" type="text" name="image" value={image} 
+              onChange={(e) => setImage(e.target.value)}/>
+            </label>
+            <label className="form-pet-age">
+              <p className="p-form-age"> Age: </p>
+              <input className="form-age" type="text" name="age" value={age} 
+              onChange={(e) => setAge(e.target.value)}/>
+            </label>
+            <label className="form-pet-breed">
+              <p className="p-form-breed"> Breed: </p>
+              <input className="form-breed" type="text" name="breed" value={breed} 
+              onChange={(e) => setBreed(e.target.value)}/>
+            </label>
+            <label className="form-pet-hair">
+              <p className="p-form-hair"> Hair: </p>
+              <input className="form-hair" type="text" name="hairType" value={hairType} 
+              onChange={(e) => setHairType(e.target.value)}/>
+            </label>
+            <label className="form-pet-chip">
+              <p className="p-form-chip"> Chip: </p>
+              <input className="form-chip" type="text" name="chipId" value={chipId} 
+              onChange={(e) => setChipId(e.target.value)}/>
+            </label> 
+            <br/> 
+          </div>
         <div className="pet-create2">
           <label className="form-pet-sex">
             <p className="p-form-sex"> Sex: </p>

@@ -2,7 +2,7 @@ import React from 'react';
 import LoginPage from './LoginPage';
 import {useContext, useState} from 'react';
 import { AuthContext } from '../Context/auth.context';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 function UserPage() {
 
