@@ -11,6 +11,7 @@ function AuthProviderWrapper(props){
     const [isLoading, setIsLoading] = useState(true);
     const [user, setUser] = useState(null);
     const [authError, setAuthError] = useState(null);
+    
 
 
     /* Store the token in the local storage */
@@ -65,6 +66,8 @@ function AuthProviderWrapper(props){
     const logOutUser = () =>{
         removeToken();
         authenticateUser();
+
+        console.log("logout")
     };
 
     useEffect(()=>{
