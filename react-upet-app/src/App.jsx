@@ -2,19 +2,19 @@ import { useState } from 'react';
 import './App.css';
 import { Routes, Route, Navigate } from "react-router-dom";
 
-import HomePage from './Pages/HomePage';
-import SignUpPage from './Pages/SignUpPage';
-import LoginPage from './Pages/LoginPage';
-import PetProfilePage from "./Pages/PetProfilePage";
-import PetsPage from './Pages/PetsPage';
-import EditPetPage from './Pages/EditPetPage';
-import CreatePetPage from './Pages/CreatePetPage';
-import AdoptPage from './Pages/AdoptPage';
-import UserPage from './Pages/UserPage';
-import Navbar from './Components/Navbar';
-import Sidebar from './Components/Sidebar';
-import AddPetMenu from './Components/addPetMenu';
-import IsPrivate from './Components/IsPrivate';
+import HomePage from './Pages/HomePage.jsx';
+import SignUpPage from './Pages/SignUpPage.jsx';
+import LoginPage from './Pages/LoginPage.jsx';
+import PetProfilePage from "./Pages/PetProfilePage.jsx";
+import PetsPage from './Pages/PetsPage.jsx';
+import EditPetPage from './Pages/EditPetPage.jsx';
+import CreatePetPage from './Pages/CreatePetPage.jsx';
+import AdoptPage from './Pages/AdoptPage.jsx';
+import UserPage from './Pages/UserPage.jsx';
+import Navbar from './Components/Navbar.jsx';
+import Sidebar from './Components/Sidebar.jsx';
+import AddPetMenu from './Components/addPetMenu.jsx';
+import IsPrivate from './Components/IsPrivate.jsx';
 
 function App() {
 
