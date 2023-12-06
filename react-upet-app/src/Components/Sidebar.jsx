@@ -22,6 +22,9 @@ function Sidebar() {
             User
           </Link>
         </li>
+        <li>
+          Logout
+        </li>
       </ul>
     </div>
   );

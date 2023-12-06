@@ -158,8 +158,8 @@ return (
       </label>
       <label className="form-adopt-description">
             <p className="adopt-form-description"> Description: </p>
-            <input className="a-form-description" type="text" name="description" value={description} 
-            onChange={(e)=>setDescription(e.target.value)}/>
+            <input className="a-form-description" type="text" name="description" 
+            value={description} onChange={(e)=>setDescription(e.target.value)}/>
       </label>
       <label className="form-adopt-diet">
             <p className="adopt-form-diet"> Diet: </p>
@@ -168,13 +168,13 @@ return (
       </label>
       <label className="form-adopt-medical">
             <p className="adopt-form-medical"> Medical Record: </p>
-            <input className="a-form-medical" type="text" name="medicalRecord" value={medicalRecord} 
-            onChange={(e)=>setMedicalRecord(e.target.value)}/>
+            <input className="a-form-medical" type="text" name="medicalRecord" 
+            value={medicalRecord} onChange={(e)=>setMedicalRecord(e.target.value)}/>
       </label>
       <label className="form-adopt-health">
             <p className="adopt-form-health"> Health Status: </p>
-            <input className="a-form-health" type="text" name="healthStatus" value={healthStatus} 
-            onChange={(e)=>setHealthStatus(e.target.value)}/>
+            <input className="a-form-health" type="text" name="healthStatus" 
+            value={healthStatus} onChange={(e)=>setHealthStatus(e.target.value)}/>
       </label>
       <label className="form-adopt-location">
             <p className="adopt-form-location"> Location: </p>
@@ -183,8 +183,8 @@ return (
       </label>
       <label className="form-adopt-association">
             <p className="adopt-form-association"> Association: </p>
-            <input className="a-form-association" type="text" name="associationName" value={associationName} 
-            onChange={(e)=>setAssociationName(e.target.value)}/>
+            <input className="a-form-association" type="text" name="associationName" 
+            value={associationName} onChange={(e)=>setAssociationName(e.target.value)}/>
       </label>
       </div>
         {/*<Link to="/pets" className="adopt-button"> Apply </Link>*/}

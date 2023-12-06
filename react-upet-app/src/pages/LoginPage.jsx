@@ -25,6 +25,7 @@ function LoginPage() {
             .then((response)=>{
                 storeToken(response.data.authToken);
                 authenticateUser();
+                console.log(`You logged in with ${email}`);
                 navigate('/');
             })
             .catch((error)=>{

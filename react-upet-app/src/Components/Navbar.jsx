@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../Context/auth.context";
+import Sidebar from "./Sidebar";
 
 
 function Navbar({ toggleSidebar }) {
@@ -62,9 +63,7 @@ function Navbar({ toggleSidebar }) {
             </Link>
             )}
         </div>
-      {/* <div>
-        <Link to="/" className="user-img-link"><img className="user-png" src="/images/user.png"/></Link>
-      </div> */}
+       <div>User</div> 
     </nav>
   );
 }
