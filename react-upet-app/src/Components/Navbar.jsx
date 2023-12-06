@@ -31,40 +31,40 @@ function Navbar({ toggleSidebar }) {
 
   return (
     <nav className="navbar">
-      <div className="navbar-links">
-        <Link to="/" className="homepage-link"><img className="home-png" 
-            src="/images/home-page.png"/></Link>
-            <div className="nav-pets-adopt">
-              <Link to="/pets" className="pets-link"> PETS</Link>
-              <p>|</p>
-              <Link to="/adopt" className="adopt-link"> ADOPT </Link>
-            </div>
-            <div className="sidebar-wrapper">
-              <button
+        <div className="navbar-links">
+          <Link to="/" className="homepage-link"><img className="home-png" 
+          src="/images/home-page.png"/></Link>
+        <div className="nav-pets-adopt">
+          <Link to="/pets" className="pets-link"> PETS</Link>
+          <p>|</p>
+          <Link to="/adopt" className="adopt-link"> ADOPT </Link>
+        </div>
+        </div>
+          <div className="sidebar-wrapper">
+            <button
               className="sidebar"
               onClick={toggleSidebar}
               >
-                ☰
-              </button>
-              <span className="retrieve-link">
-                {getCurrentLinkText(location.pathname)}
-              </span>
-            </div>
-            <div className="logged-in-log-out-wrapper">
-              {isLoggedIn && (
-               <button className="log-out" onClick={logOutUser}>Log Out</button>
-               )}
-               {!isLoggedIn && location.pathname !== "/login" && location.pathname 
-               !== "/signup" && (
-               <Link to ="/login">
-                <button className="log-in">Log In</button>
-               </Link>
-               )}
-            </div>
+              ☰
+            </button>
+            <span className="retrieve-link">
+              {getCurrentLinkText(location.pathname)}
+            </span>
+          </div>
+          <div className="logged-in-log-out-wrapper">
+            {isLoggedIn && (
+            <button className="log-out" onClick={logOutUser}>Log Out</button>
+            )}
+            {!isLoggedIn && location.pathname !== "/login" && location.pathname 
+            !== "/signup" && (
+            <Link to ="/login">
+              <button className="log-in">Log In</button>
+            </Link>
+            )}
         </div>
-        {/* <div>
-            <Link to="/" className="user-img-link"><img className="user-png" src="/images/user.png"/></Link>
-        </div> */}
+      {/* <div>
+        <Link to="/" className="user-img-link"><img className="user-png" src="/images/user.png"/></Link>
+      </div> */}
     </nav>
   );
 }

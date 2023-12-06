@@ -136,6 +136,19 @@ body{
   padding: 20px;
 }
 
+/*.nav-sides{
+ display: flex;
+ flex-direction: column;
+}
+
+.nav-left{
+align-items: start;
+}
+
+.nav-right{
+  margin-left: 600px;
+}*/
+
 /* - Add Menu 1 ------------------------------------------------------------------------*/
 
 .menu{
