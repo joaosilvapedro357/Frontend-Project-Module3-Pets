@@ -20,7 +20,8 @@ function PetsPage(){
 
     return(     
         <div className='pets-page'>
-            <AddPetMenu className='pets-addpet-menu'/>
+            {/*<AddPetMenu className='pets-addpet-menu'/>*/}
+            <Link className="pets-addpet-menu" to={`/pets/add`}> Add + </Link>
             <h1 className="pets-title"> My Pets </h1>
             <h3 className="pets-description"> Click your pet's name for more details </h3>
             <div className='pets-page-scroll'>

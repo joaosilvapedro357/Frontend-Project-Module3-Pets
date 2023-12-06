@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const BACKEND_URL = 'http://localhost:3000/api';
@@ -20,7 +20,8 @@ function CreatePetPage() {
   const [medicalRecord, setMedicalRecord] = useState('');
   const [typeOfPet, setTypeOfPet] = useState('');
 
-    const navigate = useNavigate;
+    const navigate = useNavigate();
+
     const handleSubmit = (e) => {
       //let typeOfPet = 'dog';
       e.preventDefault();
@@ -46,7 +47,7 @@ function CreatePetPage() {
       // In the url we can use 'http://localhost:${PORT}' as well.
       axios.post(`${BACKEND_URL}/pet`, requestBody)
       .then(() => {
-          getAllPets();
+          //getAllPets();
           setName('');
           setAge('');
           setImage('');
@@ -59,8 +60,7 @@ function CreatePetPage() {
           setDescription('');
           setDiet('');
           setMedicalRecord('');
-          /* ADD SUCCESS MESSAGE AFTER ADDING PET */
-          navigate("/pets");
+          navigate(`/pets/`);
       })
       .catch((error) => {
         console.error("Error creating pet:", error);

@@ -149,6 +149,11 @@ align-items: start;
   margin-left: 600px;
 }*/
 
+.show-both-pets-and-adopt{
+  display: flex;
+  align-items: center;
+}
+
 /* - Add Menu 1 ------------------------------------------------------------------------*/
 
 .menu{
@@ -264,6 +269,20 @@ align-items: start;
 }/* ! */
 
 .pets-addpet-menu{
+  color: rgb(53, 39, 26);
+  font-weight: bold;
+  border: 1px solid rgb(124, 115, 105);
+  background-color: transparent;
+  padding-left: 17px;
+  padding-right: 17px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgb(124, 115, 105);
+}
+
+.pets-addpet-menu:hover{
+  color: rgb(153, 115, 236);
 }
 
 .pets-title{
