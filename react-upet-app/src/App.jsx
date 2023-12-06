@@ -13,7 +13,7 @@ import AdoptPage from './pages/AdoptPage.jsx';
 import UserPage from './pages/UserPage.jsx';
 import Navbar from './Components/Navbar.jsx';
 import Sidebar from './Components/Sidebar.jsx';
-import AddPetMenu from './Components/addPetMenu.jsx';
+import AddPetMenu from './Components/AddPetMenu.jsx';
 import IsPrivate from './Components/IsPrivate.jsx';
 
 function App() {
