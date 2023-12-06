@@ -2,6 +2,8 @@ import { Link, useLocation } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../Context/auth.context";
 import Sidebar from "./Sidebar";
+import IsPrivate from "./IsPrivate";
+import IsAnon from "./IsAnon";
 
 
 function Navbar({ toggleSidebar }) {
@@ -37,9 +39,18 @@ function Navbar({ toggleSidebar }) {
           <Link to="/" className="homepage-link"><img className="home-png" 
           src="/images/home-page.png"/></Link>
         <div className="nav-pets-adopt">
-          <Link to="/pets" className="pets-link"> PETS</Link>
-          <p>|</p>
-          <Link to="/adopt" className="adopt-link"> ADOPT </Link>
+          {isLoggedIn?(
+          <div className="show-both-pets-and-adopt">
+            <Link to="/pets" className="pets-link"> PETS</Link>
+            <p>|</p>
+            <Link to="/adopt" className="adopt-link"> ADOPT </Link>
+          </div>
+          ): (
+          <div className="show-only-adopt">
+            <Link to="/adopt" className="adopt-link"> ADOPT </Link>
+          </div>
+          )
+          }
         </div>
         </div>
           <div className="sidebar-wrapper">

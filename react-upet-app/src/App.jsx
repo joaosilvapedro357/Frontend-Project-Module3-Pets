@@ -14,6 +14,7 @@ import UserPage from './Pages/UserPage';
 import Navbar from './Components/Navbar';
 import Sidebar from './Components/Sidebar';
 import AddPetMenu from './Components/addPetMenu';
+import IsPrivate from './Components/IsPrivate';
 
 function App() {
 
@@ -29,10 +30,10 @@ function App() {
           <Route path="/signup" element={<SignUpPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/" element={<HomePage />} />
-          <Route path="/pets" element={<PetsPage />} />
-          <Route path="/pets/:petId" element={<PetProfilePage/>} />
-          <Route path="/pets/:petId/edit" element={<EditPetPage />} />
-          <Route path="/pets/add" element={<CreatePetPage />} />
+          <Route path="/pets" element={<IsPrivate><PetsPage /></IsPrivate>} />
+          <Route path="/pets/:petId" element={<IsPrivate><PetProfilePage/></IsPrivate>} />
+          <Route path="/pets/:petId/edit" element={<IsPrivate><EditPetPage /></IsPrivate>} />
+          <Route path="/pets/add" element={<IsPrivate><CreatePetPage /></IsPrivate>} />
           <Route path="/adopt" element={<AdoptPage />} />
           <Route path="/user" element={<UserPage />} />
         </Routes>
