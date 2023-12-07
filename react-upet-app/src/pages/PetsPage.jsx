@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import AddPetMenu from '../Components/addPetMenu';
+import AddPetMenu from '../Components/AddPetMenu';
 
 const BACKEND_URL = 'https://upet.adaptable.app/api';
 
