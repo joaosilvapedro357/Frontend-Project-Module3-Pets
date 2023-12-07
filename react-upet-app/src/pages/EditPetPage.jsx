@@ -20,16 +20,13 @@ function EditPetPage() {
   const [medicalRecord, setMedicalRecord] = useState("");
   const [typeOfPet, setTypeOfPet] = useState("");
   const [user, setUser] = useState("");
-  const [userId, setUserId] = useState("");
 
-  const {petId} = useParams();
+  const {userId, petId} = useParams();
   const navigate = useNavigate();
 
     useEffect(()=>{
 
-      const userId = useParams();
-
-      axios.get(`${BACKEND_URL}/:userId/pets/${petId}`).then((response)=>{
+      axios.get(`${BACKEND_URL}/api/pets/${petId}`).then((response)=>{
             const onePet = response.data;
             setName(onePet.name);
             setImage(onePet.image);
@@ -50,42 +47,24 @@ function EditPetPage() {
 
     }, []);
 
-    useEffect(()=>{
-
-      const userId = useParams();
-
-      axios.get(`${BACKEND_URL}/:userId/pets/${petId}`).then((response)=>{
-          const onePet = response.data;
-          setName(onePet.name);
-          setDescription(onePet.description);
-      })
-
-      .catch((error)=> console.log(error));
-
-  }, []);
-
     const handleSubmit = (e) =>{
-
-      const userId = useParams();
       
       e.preventDefault();
 
       const requestBody = {name, image, age, breed, hairType, chipId, sex, size, 
           weight, description, diet, medicalRecord, user};
 
-        axios.put(`${BACKEND_URL}/:userId/pets/${petId}`, requestBody).then(()=>{
-            navigate(`/pets/${petId}`);
+        axios.put(`${BACKEND_URL}/api/pets/${petId}`, requestBody).then(()=>{
+            navigate(`/${userId}/pets/${petId}`);
         })
 
         .catch((error)=> console.log(error));
     }
 
     const deletePet = () =>{
-
-      const userId = useParams();
       
-        axios.delete(`${BACKEND_URL}/:userId/pets/${petId}`).then(()=>{
-            navigate("/pets");
+        axios.delete(`${BACKEND_URL}/api/pets/${petId}`).then(()=>{
+          navigate(`/${userId}/pets`);
         })
 
         .catch((error)=> console.log(error));

@@ -20,9 +20,10 @@ function CreatePetPage() {
   const [medicalRecord, setMedicalRecord] = useState('');
   const [typeOfPet, setTypeOfPet] = useState('');
   const [user, setUser] = useState("");
-  const [userId, setUserId] = useState("");
+
 
     const navigate = useNavigate();
+    const {userId} = useParams();
 
     const handleSubmit = (e) => {
       //let typeOfPet = 'dog';
@@ -42,14 +43,12 @@ function CreatePetPage() {
         diet,
         medicalRecord, 
         typeOfPet, 
-        user,
       }
   
       console.log('handling submit');
-      const userId = useParams();
   
       // In the url we can use 'http://localhost:${PORT}' as well.
-      axios.post(`${BACKEND_URL}/:userId/pet`, requestBody)
+      axios.post(`${BACKEND_URL}/api/${userId}/pet`, requestBody)
       .then(() => {
           //getAllPets();
           setName('');
@@ -64,8 +63,7 @@ function CreatePetPage() {
           setDescription('');
           setDiet('');
           setMedicalRecord('');
-          setUserId(userId);
-          navigate(`/:userId/pets/`);
+          navigate(`/${userId}/pets`);
       })
       .catch((error) => {
         console.error("Error creating pet:", error);

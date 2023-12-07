@@ -6,13 +6,12 @@ const BACKEND_URL = 'https://upet.adaptable.app';
 
 function PetProfilePage() {
     
-    const {petId} = useParams();
+    const {userId, petId} = useParams();
     const [pet, setPet] = useState();
     const [user, setUser] = useState("");
-    const userId = useParams();
 
     useEffect(()=>{
-        axios.get(`${BACKEND_URL}/:userId/pets/${petId}`).then((response)=>{
+        axios.get(`${BACKEND_URL}/api/pets/${petId}`).then((response)=>{
             const onePet = response.data;
             setPet(onePet);
         })
@@ -50,7 +49,7 @@ function PetProfilePage() {
             </div>
         </div>
         <div className="profile-page-links">
-            <Link className="prof-link-edit" to={`/:userId/pets/${petId}/edit`}> Edit </Link>
+            <Link className="prof-link-edit" to={`/${userId}/pets/${petId}/edit`}> Edit </Link>
             <Link className="prof-link-back" to={`/:userId/pets/`}> Back </Link>
         </div>
     </div>

@@ -29,10 +29,10 @@ function App() {
           <Route path="/signup" element={<SignUpPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/" element={<HomePage />} />
-          <Route path="/:userId/pets" element={<IsPrivate><PetsPage /></IsPrivate>} />
           <Route path="/:userId/pets/:petId" element={<IsPrivate><PetProfilePage/></IsPrivate>} />
           <Route path="/:userId/pets/:petId/edit" element={<IsPrivate><EditPetPage /></IsPrivate>} />
           <Route path="/:userId/pets/add" element={<IsPrivate><CreatePetPage /></IsPrivate>} />
+          <Route path="/:userId/pets" element={<IsPrivate><PetsPage /></IsPrivate>} />
           <Route path="/adopt" element={<AdoptPage />} />
           <Route path="/user" element={<UserPage />} />
         </Routes>

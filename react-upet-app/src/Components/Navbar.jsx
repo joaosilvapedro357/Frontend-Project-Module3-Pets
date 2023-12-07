@@ -9,7 +9,7 @@ import IsAnon from "./IsAnon";
 function Navbar({ toggleSidebar }) {
 
   const location = useLocation();
-  const { isLoggedIn, logOutUser } = useContext(AuthContext);
+  const { user, isLoggedIn, logOutUser } = useContext(AuthContext);
   
   const getCurrentLinkText = (pathname) => {
     const routes = {
@@ -35,12 +35,14 @@ function Navbar({ toggleSidebar }) {
   return (
     <nav className="navbar">
         <div className="navbar-links">
+          <div className="home-page-png">
           <Link to="/" className="homepage-link"><img className="home-png" 
           src="/images/home-page.png"/></Link>
+          </div>
         <div className="nav-pets-adopt">
           {isLoggedIn?(
           <div className="show-both-pets-and-adopt">
-            <Link to="/pets" className="pets-link"> PETS </Link>
+            <Link to={`${user?._id}/pets`} className="pets-link"> PETS </Link>
             <p>|</p>
             <Link to="/adopt" className="adopt-link"> ADOPT </Link>
           </div>
@@ -53,7 +55,7 @@ function Navbar({ toggleSidebar }) {
           }
         </div>
         </div>
-          <div className="sidebar-wrapper">
+          {/*<div className="sidebar-wrapper">
             <button
               className="sidebar"
               onClick={toggleSidebar}
@@ -63,16 +65,25 @@ function Navbar({ toggleSidebar }) {
             <span className="retrieve-link">
               {getCurrentLinkText(location.pathname)}
             </span>
-          </div>
+        </div>*/}
           <div className="logged-in-log-out-wrapper">
             {isLoggedIn?(
-            <button className="log-out" onClick={logOutUser}>Log Out</button>
-            ): (<Link to ="/login">
-            <button className="log-in">Log In</button>
-          </Link>)
+            <div className="nav-right-links">
+            <button className="log-out" onClick={logOutUser}>LOG OUT</button>
+            <p>|</p>
+            <Link to="/user" className="user-nav-link"> USER </Link>
+            </div>
+            ): (
+            <div className="logged-out-nav-buttons">
+            <Link to ="/login">
+              <button className="log-in">LOG IN</button>
+            </Link>
+            <Link to ="/signup">
+            <button className="sign-up">SIGN UP</button>
+          </Link>
+          </div>)
             }
-        </div>
-       <div>User</div> 
+        </div> 
     </nav>
   );
 }
