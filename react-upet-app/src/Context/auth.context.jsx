@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 
-const BACKEND_URL = 'https://upet.adaptable.app/api';
+const BACKEND_URL = 'https://upet.adaptable.app';
 
 const AuthContext = React.createContext();
 
