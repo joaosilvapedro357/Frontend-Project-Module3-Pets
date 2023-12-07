@@ -14,10 +14,10 @@ function UserPage() {
 
   return (
     <div>
-      <h1>UserPage</h1>
-      <p>email: ${email}</p>
-      <p>password: ${password}</p>
-      <p>name: ${name}</p>
+      <h1>User Details</h1>
+      <p>`email: ${email}`</p>
+      <p>`password: ${password}`</p>
+      <p>`name: ${name}`</p>
     </div>
   )
 }
