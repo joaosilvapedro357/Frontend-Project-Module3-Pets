@@ -53,7 +53,7 @@ body{
 /* - Nav Bar ------------------------------------------------------------------------*/
 
 .navbar{
-  background-color: rgb(239, 223, 204);
+  background-color: rgb(134, 35, 64);
   display: flex;
   position: fixed;
   align-items: center;
@@ -80,6 +80,12 @@ body{
 }
 
 .home-png{
+  border: 1px solid rgb(239, 223, 204);
+  background-color: rgb(239, 223, 204);
+  border-radius: 5px;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+  padding: 3px;
   width: 26px;
   height: 23px;
   display: flex;
@@ -87,18 +93,18 @@ body{
 }
 
 .pets-link{
-  color:  rgb(53, 39, 26);
+  color:  rgb(239, 223, 204);
   font-weight: bold;
   font-family: impact;
   margin-right: 10px;
 }
 
 .pets-link:hover{
-  color:  rgb(134, 35, 64);
+  color:  rgb(239, 223, 204);
 }
 
 .adopt-link{
-  color:  rgb(53, 39, 26);
+  color:  rgb(239,223, 204);
   font-family: impact;
   font-weight: bold;
   margin-left: 10px;
@@ -106,7 +112,7 @@ body{
 }
 
 .adopt-link:hover{
-  color:  rgb(134, 35, 64);
+  color:  rgb(239, 223, 204);
 }
 
 /*.add-link{
@@ -156,6 +162,11 @@ align-items: start;
 .show-both-pets-and-adopt{
   display: flex;
   align-items: center;
+  /*border: 3px solid rgb(180, 113, 51);*/
+}
+
+.show-only-adopt{
+  border: 3px solid rgb(180, 113, 51);
 }
 
 /* - Add Menu 1 ------------------------------------------------------------------------*/

@@ -38,7 +38,12 @@ function Navbar({ toggleSidebar }) {
           <Link to="/" className="homepage-link"><img className="home-png" 
           src="/images/home-page.png"/></Link>
         <div className="nav-pets-adopt">
-          {isLoggedIn?(
+        <div className="show-both-pets-and-adopt">
+            <Link to="/pets" className="pets-link"> PETS</Link>
+            <p>|</p>
+            <Link to="/adopt" className="adopt-link"> ADOPT </Link>
+          </div>
+          {/*{isLoggedIn?(
           <div className="show-both-pets-and-adopt">
             <Link to="/pets" className="pets-link"> PETS</Link>
             <p>|</p>
@@ -47,9 +52,11 @@ function Navbar({ toggleSidebar }) {
           ): (
           <div className="show-only-adopt">
             <Link to="/adopt" className="adopt-link"> ADOPT </Link>
+            <p>|</p>
           </div>
+          
           )
-          }
+          }*/}
         </div>
         </div>
           <div className="sidebar-wrapper">
