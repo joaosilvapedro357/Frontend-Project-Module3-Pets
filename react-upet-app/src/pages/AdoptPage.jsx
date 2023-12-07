@@ -3,7 +3,7 @@ import { Link, useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 //const PORT = 3000;
-const BACKEND_URL = 'https://upet.adaptable.app/api'; /* it is api because we defined it 
+const BACKEND_URL = 'https://upet.adaptable.app'; /* it is api because we defined it 
 like that in the routes */
 
 function AdoptPage() {

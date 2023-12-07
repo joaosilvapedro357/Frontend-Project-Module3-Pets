@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 
-const BACKEND_URL = 'https://upet.adaptable.app/api';
+const BACKEND_URL = 'https://upet.adaptable.app';
 
 function EditPetPage() {
 
