@@ -36,23 +36,27 @@ function LoginPage() {
     }
 
   return (
-    <div>
-        <h3>LoginPage</h3>
+    <div className='login-page'>
+        <div className='login-title'>
+        <h3> LoginPage </h3>
+        </div>
         <form onSubmit = {handleLoginSubmit}>
-            <div>
-                <label>Email</label>
-                <input type ="email" name ="email" value = {email} onChange={(e)=> 
+        <div className='login-form'>
+            <div className='login-form-email'>
+                <label> Email </label>
+                <input className='login-email-box' type ="email" name ="email" value = {email} onChange={(e)=> 
                   setEmail(e.target.value)}/>
             </div>
-            <div>
-                <label>Password</label>
+            <div className='login-form-password'>
+                <label> Password </label>
                 <input type ="password" name ="password" value = {password} 
                 onChange={(e)=> setPassword(e.target.value)}/>
             </div>
             <div>
-                <button type="submit">Login</button>
+                <button className='login-form-button' type="submit">Login</button>
             </div>
             {error && <p>{error}</p>}
+        </div>
         </form>
     </div>
   )

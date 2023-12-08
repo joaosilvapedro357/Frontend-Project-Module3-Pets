@@ -32,7 +32,9 @@ function PetsPage(){
                           <h2>{pet.name}</h2>
                           </Link>
                           <div className='pets-info' >
-                            <p>{pet.image}</p>
+                            <div className='image-rica'>
+                            <img className='pets-img' src={pet.image}/>
+                            </div>
                             <p>{pet.chipId}</p>
                             <p>{pet.description}</p>
                           </div>

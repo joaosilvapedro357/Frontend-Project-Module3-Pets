@@ -3,7 +3,7 @@ import { Link, useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 //const PORT = 3000;
-const BACKEND_URL = 'https://upet.adaptable.app'; /* it is api because we defined it 
+const BACKEND_URL = 'https://upet.adaptable.app/api'; /* it is api because we defined it 
 like that in the routes */
 
 function AdoptPage() {
@@ -24,7 +24,7 @@ function AdoptPage() {
   const [healthStatus, setHealthStatus] = useState('');
   const [location, setLocation] = useState('');
   const [associationName, setAssociationName] = useState('');
-
+  const [adoptPet, setAdoptPet] = useState('');
   const [myPetDetails, setMyPetDetails] = useState([]);
 
   const getAllPets = () =>{
@@ -98,7 +98,7 @@ return (
     <h3 className="adopt-descr"> These pets need a new home</h3>
     <img className="adopt-apamg-image" src="/images/apamg-png.webp" />
     <div className="adopt-create-form">
-    <form onSubmit={handleSubmit} className="adopt-form">
+    {/*<form onSubmit={handleSubmit} className="adopt-form">
     <div className="createadopt-column">
     <div className="adopt-create">
       <div className="adopt-create1">
@@ -122,16 +122,16 @@ return (
             <input className="a-form-age" type="text" name="age" value={age} 
             onChange={(e)=>setAge(e.target.value)}/>
       </label>
-      <label className="form-adopt-breed">
+      {/*<label className="form-adopt-breed">
             <p className="adopt-form-breed"> Breed: </p>
             <input className="a-form-breed" type="text" name="breed" value={breed} 
             onChange={(e)=>setBreed(e.target.value)}/>
-      </label>
+</label>
       <label className="form-adopt-hair">
             <p className="adopt-form-hair"> Hair Type: </p>
             <input className="a-form-hair" type="text" name="animal" value={hairType} 
             onChange={(e)=>setHairType(e.target.value)}/>
-      </label>
+</label>
       <label className="form-adopt-chip">
             <p className="adopt-form-chip"> Chip Id: </p>
             <input className="a-form-chip" type="text" name="chipId" value={chipId} 
@@ -140,14 +140,14 @@ return (
       <label className="form-adopt-sex">
             <p className="adopt-form-sex"> Sex: </p>
             <input className="a-form-sex" type="text" name="sex" value={sex} 
-            onChange={(e)=>setHairSex(e.target.value)}/>
+            onChange={(e)=>setSex(e.target.value)}/>
       </label>
       </div>
       <div className="adopt-create2">
       <label className="form-adopt-size">
             <p className="adopt-form-size"> Size: </p>
             <input className="a-form-size" type="text" name="size" value={size} 
-            onChange={(e)=>setHairSize(e.target.value)}/>
+            onChange={(e)=>setSize(e.target.value)}/>
       </label>
       <label className="form-adopt-weight">
             <p className="adopt-form-weight"> Weight: </p>
@@ -159,11 +159,7 @@ return (
             <input className="a-form-description" type="text" name="description" 
             value={description} onChange={(e)=>setDescription(e.target.value)}/>
       </label>
-      <label className="form-adopt-diet">
-            <p className="adopt-form-diet"> Diet: </p>
-            <input className="a-form-diet" type="text" name="diet" value={diet} 
-            onChange={(e)=>setDiet(e.target.value)}/>
-      </label>
+
       <label className="form-adopt-medical">
             <p className="adopt-form-medical"> Medical Record: </p>
             <input className="a-form-medical" type="text" name="medicalRecord" 
@@ -185,33 +181,34 @@ return (
             value={associationName} onChange={(e)=>setAssociationName(e.target.value)}/>
       </label>
       </div>
-        {/*<Link to="/pets" className="adopt-button"> Apply </Link>*/}
+        <Link to="/pets" className="adopt-button"> Apply </Link>
       </div>
       <div className="adopt-buton">
           < button type="submit">Add</button>
         </div>
       </div>
-    </form>
+    </form>*/}
     </div>
     <div>
     {myPetDetails.map((pet) => (
-      <div key={pet._id}>
-        <p>Name: {pet.name}</p>
-        <p>Animal: {pet.animal}</p>
-        <p>Image: {pet.image}</p>
-        <p>Age: {pet.age}</p>
-        <p>Breed: {pet.breed}</p>
-        <p>Hair Type: {pet.hairType}</p>
-        <p>ChipId: {pet.chipId}</p>
-        <p>Sex: {pet.sex}</p>
-        <p>Size: {pet.size}</p>
-        <p>Weight: {pet.weight}</p>
-        <p>Description: {pet.description}</p>
-        <p>Diet: {pet.diet}</p>
-        <p>Medical Record: {pet.medicalRecord}</p>
-        <p>Health Status: {pet.healthStatus}</p>
-        <p>Location: {pet.location}</p>
-        <p>Association Name: {pet.associationName}</p>
+      <div className="adopt-card" key={pet._id}>
+        <h2>{pet.name}</h2>
+        {/*<p>Animal: {pet.animal}</p>*/}
+        {pet && (
+                    <div className="pet-adopt-img1">
+                        <img className='pet-adopt-img' src={pet.image} alt="Pet Image" />
+                    </div>
+                )}
+                  <p>Age: {pet.age}</p>
+                  {/*<p>ChipId: {pet.chipId}</p>*/}
+                  <p>Sex: {pet.sex}</p>
+                  <p>Size: {pet.size}</p>
+                  {/*<p>Weight: {pet.weight}</p>*/}
+                  <p>Description: {pet.description}</p>
+                  {/*<p>Medical Record: {pet.medicalRecord}</p>*/}
+                  <p>Health Status: {pet.healthStatus}</p>
+                  {/*<p>Location: {pet.location}</p>*/}
+                  <p>Association Name: {pet.associationName}</p>
       </div>
         ))}
     </div>

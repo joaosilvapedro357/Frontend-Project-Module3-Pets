@@ -21,12 +21,12 @@ function PetProfilePage() {
   return (
 
     <div className="pet-profile-page">
-        <h3 classname="prof-page-description"> Your pet's digital Id </h3>
+        <h2 classname="prof-page-description"> Your pet's digital Id </h2>
         <div className="profile-parts">
             <div className="prof-img-part">
                 {pet && (
-                    <div className="pet-profile-img">
-                        <img src={pet.image} alt="Pet Image" />
+                    <div className="pet-profile-img1">
+                        <img className='pet-profile-img' src={pet.image} alt="Pet Image" />
                     </div>
                 )}
             </div>
@@ -50,7 +50,7 @@ function PetProfilePage() {
         </div>
         <div className="profile-page-links">
             <Link className="prof-link-edit" to={`/${userId}/pets/${petId}/edit`}> Edit </Link>
-            <Link className="prof-link-back" to={`/:userId/pets/`}> Back </Link>
+            <Link className="prof-link-back" to={`/${userId}/pets/`}> Back </Link>
         </div>
     </div>
   )
