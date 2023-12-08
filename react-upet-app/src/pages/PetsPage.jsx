@@ -16,7 +16,8 @@ function PetsPage(){
 
         .catch((error)=> console.log(error));
 
-    }, []);
+    }, [userId]);
+
 
     return(     
         <div className='pets-page'>
