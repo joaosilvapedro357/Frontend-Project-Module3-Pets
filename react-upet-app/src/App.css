@@ -1,0 +1,1134 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* - body ------------------------------------------------------------------------*/
+
+body{
+  /*opacity: 70%;*/
+  background-color: rgb(211, 219, 224);
+  /*background-image: url(/images/final-image.jpg);*/
+  color: rgb(53, 39, 26);
+}
+/* - Log In ------------------------------------------------------------------------*/
+
+.signup-page{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid rgb(53, 39, 26);
+  margin-top: 20px;
+  padding-top: 0px;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-bottom: 50px;
+  border-radius: 12px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0px 10px rgb(53, 39, 26);
+}
+
+.signup-title{
+  margin-top: 20px;
+  font-family: Tahoma;
+  font-size: 30px;
+}
+
+.signup-form{
+  display: flex;
+  margin-top: -10px;
+}
+
+.signup-form-pt1{
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  align-items: stretch;
+}
+
+.signup-form-pt2{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 280px;
+  align-items: stretch;
+}
+
+.signup-form-password{
+  margin-top: 15px;
+}
+
+.signup-form-email{
+  margin-top: 15px;
+}
+
+.signup-form-username{
+  margin-top: 15px;
+}
+
+.signup-form-phone{
+  margin-top: 15px;
+}
+
+.signup-form-country{
+  margin-top: 15px;
+}
+
+.signup-form-city{
+  margin-top: 15px;
+}
+
+.signup-form-address{
+  margin-top: 15px;
+}
+
+.signup-form-nrpets{
+  margin-top: 15px;
+}
+
+.signup-form-button{
+  font-family: Tahoma;
+  margin-top: 50px;
+  color: rgb(7, 78, 65);
+  font-weight: bold;
+  border: 1px solid rgb(53, 39, 26);
+  background-color: transparent;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0px 5px rgb(53, 39, 26);
+}
+
+.signup-form-button:hover{
+  color: rgb(255, 255, 255);
+  background-color: rgb(7, 78, 65);
+  /*background-color: rgb(255, 255, 255);*/
+  border: 1px solid rgb(53, 39, 26);
+}
+
+.signup-button{
+  margin-top: 15px;
+}
+
+
+/* - Sign Up ------------------------------------------------------------------------*/
+
+.login-page{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid rgb(53, 39, 26);
+  padding-top: 40px;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-bottom: 60px;
+  border-radius: 12px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0px 10px rgb(53, 39, 26);
+}
+
+.login-form{
+  display: flex;
+  flex-direction: column;
+  width: 180px;
+  align-items: stretch;
+}
+
+.login-form-password{
+  margin-top: 15px;
+}
+
+.login-form-email{
+  margin-top: 30px;
+}
+
+.login-form-button{
+  font-family: Tahoma;
+  margin-top: 50px;
+  color: rgb(7, 78, 65);
+  font-weight: bold;
+  border: 1px solid rgb(53, 39, 26);
+  background-color: transparent;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0px 5px rgb(53, 39, 26);
+}
+
+.login-form-button:hover{
+  color: rgb(255, 255, 255);
+  background-color: rgb(7, 78, 65);
+  /*background-color: rgb(255, 255, 255);*/
+  border: 1px solid rgb(53, 39, 26);
+}
+
+/* - Nav Bar ------------------------------------------------------------------------*/
+
+.navbar{
+  background-color: rgb(76, 147, 113);
+  display: flex;
+  position: fixed;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: calc(100%);
+  height:55px;
+  box-shadow: 0 1px 20px rgb(53, 39, 26);
+  justify-content: space-between;
+}
+
+.navbar-links{
+  padding-left: 1%;
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+  width: 250px;
+  height: 100%;
+}
+
+.nav-right-links{
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  width: 250px;
+  height: 50px;
+}
+
+.nav-pets-adopt{
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.home-png{
+  border: 1px solid rgb(7, 78, 65);
+  background-color: rgb(255, 255, 255);
+  border-radius: 12px;
+  padding: 5px;
+  width: 26px;
+  height: 23px;
+  margin-top: 5px;
+}
+
+.pets-link{
+   display: flex;
+  align-items: center;
+  font-family: Tahoma;
+  margin-top: 0px;
+  margin-right: 20px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  border: 1px solid rgb(7, 78, 65);
+  background-color: transparent;
+  padding-left: 17px;
+  padding-right: 17px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 8px;
+  box-shadow: 0 0px 5px rgb(7, 78, 65);
+  margin-right: 10px;
+}
+
+/*.pets-link:hover{
+  color:  rgb(255, 255, 255);
+}*/
+
+.pets-link:hover{
+  color: rgb(7, 78, 65);
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(53, 39, 26);
+}
+
+.adopt-link{
+  display: flex;
+  align-items: center;
+  font-family: Tahoma;
+  margin-top: 0px;
+  margin-right: 20px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  border: 1px solid rgb(7, 78, 65);
+  background-color: transparent;
+  padding-left: 17px;
+  padding-right: 17px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 8px;
+  box-shadow: 0 0px 5px rgb(7, 78, 65);
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.adopt-link:hover{
+  color: rgb(7, 78, 65);
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(7, 78, 65);
+}
+
+.log-out{
+  display: flex;
+  align-items: center;
+  font-family: Tahoma;
+  margin-top: 0px;
+  margin-right: 10px;
+  max-height: 80%;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  border: 1px solid rgb(7, 78, 65);
+  background-color: transparent;
+  padding-left: 17px;
+  padding-right: 17px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-radius: 8px;
+  box-shadow: 0 0px 5px rgb(7, 78, 65);
+}
+
+.user-nav-link{
+  display: flex;
+  align-items: center;
+  font-family: Tahoma;
+  margin-top: 0px;
+  margin-right: 20px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  border: 1px solid rgb(7, 78, 65);
+  background-color: transparent;
+  padding-left: 17px;
+  padding-right: 17px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 8px;
+  box-shadow: 0 0px 5px rgb(7, 78, 65);
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+.log-out:hover{
+  color: rgb(7, 78, 65);
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(7, 78, 65);
+}
+
+.user-nav-link:hover{
+  color: rgb(7, 78, 65);
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(7, 78, 65);
+}
+
+.retrieve-link{
+  border: 3px solid rgb(41, 171, 113);
+}
+
+.sidebar{
+  border: 2px solid rgb(7, 78, 65);
+  padding: 20px;
+}
+
+.show-both-pets-and-adopt{
+  display: flex;
+  align-items: center;
+  /*border: 3px solid rgb(180, 113, 51);*/
+}
+
+.log-in{
+  display: flex;
+  align-items: center;
+  font-family: Tahoma;
+  margin-top: 0px;
+  margin-right: 10px;
+  max-height: 80%;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  border: 1px solid rgb(7, 78, 65);
+  background-color: transparent;
+  padding-left: 17px;
+  padding-right: 17px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-radius: 8px;
+  box-shadow: 0 0px 5px rgb(53, 39, 26);
+}
+
+.sign-up{
+  display: flex;
+  align-items: center;
+  font-family: Tahoma;
+  margin-top: 0px;
+  max-height: 80%;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  border: 1px solid rgb(7, 78, 65);
+  background-color: transparent;
+  padding-left: 17px;
+  padding-right: 17px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-radius: 8px;
+  box-shadow: 0 0px 5px rgb(53, 39, 26);
+}
+
+.log-in:hover{
+  color: rgb(7, 78, 65);
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(7, 78, 65);
+}
+
+.sign-up:hover{
+  color: rgb(7, 78, 65);
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(7, 78, 65);
+}
+
+/*.show-only-adopt{
+ 
+}*/
+
+.logged-out-nav-buttons{
+  display: flex;
+  align-items: center;
+  margin-right: 0px;
+  width: 200px;
+}
+
+/* - Home Page ------------------------------------------------------------------------*/
+
+.home-page {
+  width: 1470px;
+  height: 680px;
+  margin-top: 15px;
+  margin-left: -95px;
+  background-image: url(/images/final-image.jpg);
+  background-size: cover;
+  background-position-y: 38%;
+  background-color: transparent;
+  /*background-color: transparent;
+  background-image: url(/images/garden-test2.png);
+  background-position: 50%;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-image{
+  width:870px;
+  height:470px;
+}
+
+.home-title{
+  color: rgb(53, 39, 26);
+  margin-top: -400px;
+  margin-bottom: 15px;
+  font-family: Tahoma;
+  font-size: 80px;
+  font-weight: 800;
+  /*text-shadow: 0 2px 10px rgb(124, 115, 105);*/
+}
+
+.home-description{
+  color: rgb(7, 78, 65);
+  margin-bottom: 20px;
+  margin-top: 5px;
+  font-family: Tahoma;
+  font-size: 30px;
+  /*text-shadow: 0 2px 10px rgb(124, 115, 105);*/
+}
+
+.home-buttons{
+  display: flex;
+  margin-top: 15px;
+}
+
+.home-pets-button{
+  color: rgb(7, 78, 65);
+  font-weight: bold;
+  font-family: Tahoma;
+  font-size: 20px;
+  border: 1px solid rgb(7, 78, 65);
+  background-color: transparent;
+  padding-left: 19px;
+  padding-right: 19px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 18px;
+  box-shadow: 0 2px 2px rgb(53, 39, 26);
+  margin-right: 12px;
+}
+
+.home-adopt-button{
+  color: rgb(7, 78, 65);
+  font-weight: bold;
+  font-family: Tahoma;
+  font-size: 20px;
+  border: 1px solid rgb(7, 78, 65);
+  background-color: transparent;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 18px;
+  box-shadow: 0 2px 2px rgb(53, 39, 26);
+  margin-left: 5px;
+}
+
+.home-pets-button:hover{
+  color: rgb(255, 255, 255);
+  background-color: rgb(76, 147, 113);
+  border: 1px solid rgb(53, 39, 26);
+}
+
+.home-adopt-button:hover{
+  color: rgb(255, 255, 255);
+  background-color: rgb(76, 147, 113);
+  border: 1px solid rgb(53, 39, 26);
+}
+
+.home-signup-button{
+  color: rgb(7, 78, 65);
+  font-weight: bold;
+  font-family: Tahoma;
+  font-size: 20px;
+  border: 1px solid rgb(7, 78, 65);
+  background-color: transparent;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 12px rgb(53, 39, 26);
+  margin-left: 15px;
+}
+
+.home-signup-button:hover{
+  color: rgb(255, 255, 255);
+  background-color: rgb(76, 147, 113);
+  border: 1px solid rgb(53, 39, 26);
+}
+
+/* - Pets Page ------------------------------------------------------------------------*/
+
+.pets-page{
+  color: rgb(7, 78, 65);
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /*max-width: 850px;*/
+}/* ! */
+
+.pets-addpet-menu{
+  color: rgb(7, 78, 65);
+  font-weight: bold;
+  border: 1px solid rgb(124, 115, 105);
+  background-color: transparent;
+  padding-left: 17px;
+  padding-right: 17px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgb(124, 115, 105);
+}
+
+.pets-img{
+  max-height:150px;
+  margin-top: 10px;
+  border: 0px solid transparent;
+  box-shadow: 0 0px 10px rgb(154, 144, 133);
+  border-radius: 10px;
+}
+
+.pets-addpet-menu:hover{
+  color: rgb(7, 78, 65);
+}
+
+.pets-title{
+  color: rgb(53, 39, 26);
+  margin-top: 30px;
+  font-family: Tahoma;
+}
+
+.pets-description{
+  margin-top: -20px;
+  margin-bottom: 30px;
+  font-family: Tahoma;
+}
+
+.pets-page-scroll{
+  border: 2px solid rgb(7, 78, 65);
+  background-color: rgb(255, 255, 255);
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgb(154, 144, 133);
+  overflow-y: scroll;
+  height: 380px;
+}
+
+/*.pets-page-scroll::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+  border-radius: 6px;
+}*/
+
+.pets-list{
+  margin-left: 10px;
+  margin-top: 50px;
+}
+
+.pet-name-link{
+  color:  rgb(7, 78, 65);
+  font-weight: bold;
+}
+
+.pet-name-link:hover{
+  color: rgb(76, 147, 113);
+}
+
+.pets-info{
+  background-color: rgb(211, 219, 224);
+  border: 1px solid rgb(211, 219, 224);
+  box-shadow: 0 0px 2px rgb(124, 115, 105);
+  border-radius: 15px;
+  padding: 2px;
+  margin: 3px;
+  width: 500px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+/*.petpage-button{
+  margin-bottom: 20px;
+}*/
+
+/* - Pet Profile Page ------------------------------------------------------------------------*/
+
+.pet-profile-page{
+  color: rgb(53, 39, 26);
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.prof-page-description{
+  color: rgb(76, 147, 113);
+  font-family: Tahoma;
+  margin-top: 120px;
+}
+
+.profile-parts{
+  display: flex;
+  /*gap: 20px;*/
+}
+
+.p-name{
+  padding: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  /*border: 2px solid rgb(20, 14, 35);
+  box-shadow: 0 0px 4px rgb(13, 9, 23);
+  border-radius: 7px;*/
+}
+
+.pet-profile-info{
+  border: 1px solid transparent;
+  box-shadow: 0 0px 5px rgb(124, 115, 105);
+  border-radius: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  width: 500px;
+}
+
+.profile-page-links{
+  width: 180px;
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.prof-link-edit{
+  color: rgb(53, 39, 26);
+  font-weight: bold;
+  border: 1px solid rgb(124, 115, 105);
+  background-color: transparent;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgb(124, 115, 105);
+  margin-right: 5px;
+}
+
+.prof-link-back{
+  color: rgb(53, 39, 26);
+  font-weight: bold;
+  border: 1px solid rgb(124, 115, 105);
+  background-color: transparent;
+  padding-left: 21px;
+  padding-right: 21px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgb(124, 115, 105);
+  margin-right: 5px;
+}
+
+.prof-link-edit:hover{
+  color: rgb(7, 78, 65);
+}
+
+.prof-link-back:hover{
+  color: rgb(7, 78, 65);
+}
+
+/*.image-rica{
+  width: 250px;
+  height: 500px
+}*/
+
+.pet-profile-img{
+  max-height: 515px;
+  border: 1px solid rgb(124, 115, 105);
+  border-radius: 12px;
+}
+
+/* - Create Page ------------------------------------------------------------------------*/
+
+.create-page{
+  color: rgb(53, 39, 26);
+  margin-top: -50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /*max-width: 850px;*/
+}
+
+.pets-create-form{
+  margin-top: 0px;
+  display: flex;
+}
+
+.pets-create{
+  display: flex;
+}
+
+.add-buton{
+  margin-top: 45px;
+}
+
+.create-title{
+  font-family: Tahoma;
+  margin-top: 0px;
+}
+
+.createpage-description{
+  font-family: Tahoma;
+  margin-top: -20px;
+  margin-bottom: 50px;
+}
+
+.creatediv-column{
+  display: flex;
+  flex-direction: column;
+}
+
+.pet-create1{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 280px;
+  align-items: stretch;
+}
+
+.pet-create2{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 280px;
+  align-items: stretch;
+  margin-left: 30px;
+}
+
+.p-form-name{
+  border: 2px solid rgb(124, 115, 105);
+  box-shadow: 0 0px 2px rgb(124, 115, 105);
+  border-radius: 5px;
+  padding: 2px;
+  margin: 3px;
+  margin-top: 20px;
+}
+
+.p-form-image{
+  border: 2px solid rgb(124, 115, 105);
+  box-shadow: 0 0px 5px rgb(124, 115, 105);
+  border-radius: 5px;
+  padding: 2px;
+  margin: 3px;
+}
+
+.p-form-age{
+  border: 2px solid rgb(124, 115, 105);
+  box-shadow: 0 0px 2px rgb(124, 115, 105);
+  border-radius: 5px;
+  padding: 2px;
+  margin: 3px;
+}
+
+.p-form-breed{
+  border: 2px solid rgb(124, 115, 105);
+  box-shadow: 0 0px 2px rgb(124, 115, 105);
+  border-radius: 5px;
+  padding: 2px;
+  margin: 3px;
+}
+
+.p-form-hair{
+  border: 2px solid rgb(124, 115, 105);
+  box-shadow: 0 0px 2px rgb(124, 115, 105);
+  border-radius: 5px;
+  padding: 2px;
+  margin: 3px;
+}
+
+.p-form-chip{
+  border: 2px solid rgb(124, 115, 105);
+  box-shadow: 0 0px 2px rgb(124, 115, 105);
+  border-radius: 5px;
+  padding: 2px;
+  margin: 3px;
+}
+
+.p-form-sex{
+  border: 2px solid rgb(124, 115, 105);
+  box-shadow: 0 0px 2px rgb(124, 115, 105);
+  border-radius: 5px;
+  padding: 2px;
+  margin: 3px;
+}
+
+.p-form-size{
+  border: 2px solid rgb(124, 115, 105);
+  box-shadow: 0 0px 2px rgb(124, 115, 105);
+  border-radius: 5px;
+  padding: 2px;
+  margin: 3px;
+}
+
+.p-form-weight{
+  border: 2px solid rgb(124, 115, 105);
+  box-shadow: 0 0px 2px rgb(124, 115, 105);
+  border-radius: 5px;
+  padding: 2px;
+  margin: 3px;
+}
+
+.p-form-description{
+  font-family: Tahoma;
+  border: 2px solid rgb(124, 115, 105);
+  box-shadow: 0 0px 2px rgb(124, 115, 105);
+  border-radius: 5px;
+  padding: 2px;
+  margin: 3px;
+}
+
+.p-form-diet{
+  font-family: Tahoma;
+  border: 2px solid rgb(124, 115, 105);
+  box-shadow: 0 0px 2px rgb(124, 115, 105);
+  border-radius: 5px;
+  padding: 2px;
+  margin: 3px;
+}
+
+.p-form-medical{
+  font-family: Tahoma;
+  border: 2px solid rgb(124, 115, 105);
+  box-shadow: 0 0px 2px rgb(124, 115, 105);
+  border-radius: 5px;
+  padding: 2px;
+  margin: 3px;
+}
+
+.form-name{
+  align-items: end;
+}
+
+.form-image{
+  align-items: end;
+}
+
+.form-age{
+  align-items: end;
+}
+
+.form-breed{
+  align-items: end;
+}
+
+.form-hair{
+  align-items: end;
+}
+
+.form-chip{
+  align-items: end;
+}
+
+.form-sex{
+  align-items: end;
+}
+
+.form-size{
+  align-items: end;
+}
+
+.form-weight{
+  align-items: end;
+}
+
+.form-description{
+  align-items: end;
+}
+
+.form-diet{
+  align-items: end;
+}
+
+.form-medical{
+  align-items: end;
+}
+
+.form-pet-name{
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-pet-image{
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-pet-age{
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-pet-breed{
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-pet-hair{
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-pet-chip{
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-pet-sex{
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-pet-size{
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-pet-weight{
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-pet-description{
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-pet-diet{
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-pet-medical{
+  display: flex;
+  justify-content: space-between;
+}
+
+/*.pets-button{
+  color: rgb(53, 39, 26);
+  font-weight: bold;
+  border: 1px solid rgb(53, 39, 26);
+  background-color: transparent;
+  padding-left: 17px;
+  padding-right: 17px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgb(53, 39, 26);
+}*/
+
+/* - Adopt Page ------------------------------------------------------------------------*/
+
+.adopt-page{
+  color: rgb(53, 39, 26);
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /*max-width: 850px;*/
+}
+
+/*.adopt-pt1{
+  display: flex;
+}*/
+
+.adopt-card{
+  background-color: white;
+  border: 2px solid rgb(7, 78, 65);
+  box-shadow: 0 2px 5px rgb(53, 39, 26);
+  border-radius: 12px;
+  margin-bottom: 35px;
+  padding-bottom: 15px;
+  padding-top: 2px;
+  margin-top: 20px;
+}
+
+.adopt-title{
+  color: rgb(7, 78, 65);
+  font-family: Tahoma;
+  margin-top: -10px;
+  margin-bottom: 0;
+}
+
+.adopt-description{
+  font-family: Tahoma;
+  color: rgb(53, 39, 26);
+}
+
+.adopt-create{
+  margin-top: 20px;
+  display: flex;
+}
+
+.createadopt-column{
+  display: flex;
+  flex-direction: column;
+}
+
+.adopt-form{
+  margin-top: 0px;
+  display: flex;
+}
+
+.adopt-create1{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 280px;
+  align-items: stretch;
+}
+
+.adopt-create2{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 280px;
+  align-items: stretch;
+  margin-left: 30px;
+}
+
+.adopt-title{
+  margin-top: 55px;
+  font-family: Tahoma;
+}
+
+.pet-adopt-img{
+  max-height: 200px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgb(53, 39, 26);
+}
+
+.adopt-button{
+  color: rgb(53, 39, 26);
+  font-weight: bold;
+  border: 1px solid rgb(53, 39, 26);
+  background-color: transparent;
+  padding-left: 17px;
+  padding-right: 17px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgb(53, 39, 26);
+  margin-top: 50px;
+}
+
+.adopt-button:hover{
+  color: rgb(7, 78, 65);
+}
+
+.adopt-apamg-image{
+    width:100px;
+    height:100px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.adopt-buton{
+  margin-top: 45px;
+}
