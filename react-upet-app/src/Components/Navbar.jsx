@@ -1,13 +1,14 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link,  useParams, useLocation } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../Context/auth.context";
 import Sidebar from "./Sidebar";
 import IsPrivate from "./IsPrivate";
 import IsAnon from "./IsAnon";
+import './Navbar.css';
 
 
 function Navbar({ toggleSidebar }) {
-
+  const{userId} = useParams();
   const location = useLocation();
   const { user, isLoggedIn, logOutUser } = useContext(AuthContext);
   
@@ -36,20 +37,23 @@ function Navbar({ toggleSidebar }) {
     <nav className="navbar">
         <div className="navbar-links">
           <div className="home-page-png">
-          <Link to="/" className="homepage-link"><img className="home-png" 
-          src="/images/home-page.png"/></Link>
+          <Link to="/" className="homepage-link"><div className="nav-page-title">
+        <p className="nav-title">U</p><p className="nav-title-2">PET</p>
+        </div></Link>
           </div>
         <div className="nav-pets-adopt">
           {isLoggedIn?(
           <div className="show-both-pets-and-adopt">
             <Link to={`${user?._id}/pets`} className="pets-link"> PETS </Link>
-            <p>|</p>
+            <Link to="/about" className="about-link"> ABOUT </Link>
             <Link to="/adopt" className="adopt-link"> ADOPT </Link>
           </div>
           ): (
           <div className="show-only-adopt">
-            <Link to="/adopt" className="adopt-link"> ADOPT </Link>
+            <Link to="/about" className="about-link"> ABOUT </Link>
+            <Link to="/adopt" className="adopt-link-lgout"> ADOPT </Link>
           </div>
+          
           
           )
           }
@@ -70,8 +74,7 @@ function Navbar({ toggleSidebar }) {
             {isLoggedIn?(
             <div className="nav-right-links">
             <button className="log-out" onClick={logOutUser}>LOG OUT</button>
-            <p>|</p>
-            <Link to="/user" className="user-nav-link"> USER </Link>
+            <Link to={`users/${user?._id}`} className="user-link"> USER </Link>
             </div>
             ): (
             <div className="logged-out-nav-buttons">

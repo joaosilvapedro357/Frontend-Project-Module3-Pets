@@ -1,13 +1,16 @@
 import { Link } from "react-router-dom"; 
 import { AuthContext } from '../Context/auth.context';
 import { useContext } from "react";
+import './HomePage.css';
 
 function HomePage() {
   const {user} = useContext(AuthContext);
   return (
     <div className="home-page">
-        <h1 className="home-title">Upet</h1>
-        <h2 className="home-description">All about pet friends</h2>
+        <div className="home-page-title">
+        <h1 className="home-title">U</h1><h1 className="home-title-2">PET</h1>
+        </div>
+        <h2 className="home-description">all about pet friends</h2>
         {/*<img className="home-image" src="/images/home-image.png" />{*/}
         <div className="home-buttons">
         {user? (
@@ -16,7 +19,7 @@ function HomePage() {
         </div>
         ): 
         <div className="loginsignup-button"> 
-          <Link to="/login" className="home-adopt-button"> LOGIN </Link>
+          <Link to="/login" className="home-login-button"> LOGIN </Link>
           <Link to="/signup" className="home-signup-button"> SIGN UP </Link>
           </div>}
         </div>

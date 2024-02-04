@@ -1,0 +1,99 @@
+/* - LogIn Page ------------------------------------------------------------------------*/
+
+.login-page{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(213, 224, 229);
+  width: 1470px;
+  height: 100vh;
+}
+
+.login-page-1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: -65px;
+}
+
+.login-page-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 380px;
+  width: 450px;
+  background-color: rgb(209, 244, 215);
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgb(53, 39, 26);
+}
+
+.login-title{
+  color: black;
+  font-family: helvetica;
+  font-size: 30px;
+}
+
+.login-form{
+  display: flex;
+  flex-direction: column;
+  width: 180px;
+  align-items: center;
+}
+
+.login-form-password{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+  color: black;
+}
+
+.form-password{
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: 400;
+  color: black;
+  margin-bottom: 7px;
+}
+
+.form-email{
+  font-size: 20px;
+  font-weight: 400;
+  color: black;
+  margin-bottom: 7px;
+}
+
+.login-form-email{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: 600;
+  color: beige;
+}
+
+.login-form-button{
+  color: black;
+  font-family: helvetica;
+  font-size: 20px;
+  font-weight: bold;
+  border: 1px solid black;
+  background-color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-radius: 7px;
+  box-shadow: 0 1px 2px rgb(53, 39, 26);
+  margin-top: 70px;
+  margin-bottom: 30px;
+}
+
+.login-form-button:hover{
+  color: rgb(21, 95, 79);
+  border: 1px solid black;
+}

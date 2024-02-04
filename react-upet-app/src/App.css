@@ -1,4 +1,4 @@
-#root {
+.root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -45,14 +45,11 @@
 
 /* - body ------------------------------------------------------------------------*/
 
-body{
-  /*opacity: 70%;*/
-  background-color: rgb(211, 219, 224);
-  /*background-image: url(/images/final-image.jpg);*/
-  color: rgb(53, 39, 26);
-}
-/* - Log In ------------------------------------------------------------------------*/
+/* IN Index.css*/
 
+/* - Sign Up ------------------------------------------------------------------------*/
+
+/*
 .signup-page{
   display: flex;
   flex-direction: column;
@@ -144,17 +141,18 @@ body{
 .signup-form-button:hover{
   color: rgb(255, 255, 255);
   background-color: rgb(7, 78, 65);
-  /*background-color: rgb(255, 255, 255);*/
+  background-color: rgb(255, 255, 255);
   border: 1px solid rgb(53, 39, 26);
 }
 
 .signup-button{
   margin-top: 15px;
 }
+*/
 
+/* - Log In ------------------------------------------------------------------------*/
 
-/* - Sign Up ------------------------------------------------------------------------*/
-
+/*
 .login-page{
   display: flex;
   flex-direction: column;
@@ -202,12 +200,14 @@ body{
 .login-form-button:hover{
   color: rgb(255, 255, 255);
   background-color: rgb(7, 78, 65);
-  /*background-color: rgb(255, 255, 255);*/
+  background-color: rgb(255, 255, 255);
   border: 1px solid rgb(53, 39, 26);
 }
+*/
 
 /* - Nav Bar ------------------------------------------------------------------------*/
 
+/*
 .navbar{
   background-color: rgb(76, 147, 113);
   display: flex;
@@ -272,10 +272,6 @@ body{
   box-shadow: 0 0px 5px rgb(7, 78, 65);
   margin-right: 10px;
 }
-
-/*.pets-link:hover{
-  color:  rgb(255, 255, 255);
-}*/
 
 .pets-link:hover{
   color: rgb(7, 78, 65);
@@ -372,7 +368,7 @@ body{
 .show-both-pets-and-adopt{
   display: flex;
   align-items: center;
-  /*border: 3px solid rgb(180, 113, 51);*/
+  border: 3px solid rgb(180, 113, 51);
 }
 
 .log-in{
@@ -428,15 +424,18 @@ body{
  
 }*/
 
+/*
 .logged-out-nav-buttons{
   display: flex;
   align-items: center;
   margin-right: 0px;
   width: 200px;
 }
+*/
 
 /* - Home Page ------------------------------------------------------------------------*/
 
+/*
 .home-page {
   width: 1470px;
   height: 680px;
@@ -449,6 +448,7 @@ body{
   /*background-color: transparent;
   background-image: url(/images/garden-test2.png);
   background-position: 50%;*/
+  /*
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -467,7 +467,7 @@ body{
   font-family: Tahoma;
   font-size: 80px;
   font-weight: 800;
-  /*text-shadow: 0 2px 10px rgb(124, 115, 105);*/
+  text-shadow: 0 2px 10px rgb(124, 115, 105);
 }
 
 .home-description{
@@ -476,7 +476,7 @@ body{
   margin-top: 5px;
   font-family: Tahoma;
   font-size: 30px;
-  /*text-shadow: 0 2px 10px rgb(124, 115, 105);*/
+  text-shadow: 0 2px 10px rgb(124, 115, 105);
 }
 
 .home-buttons{
@@ -549,9 +549,11 @@ body{
   background-color: rgb(76, 147, 113);
   border: 1px solid rgb(53, 39, 26);
 }
+*/
 
 /* - Pets Page ------------------------------------------------------------------------*/
 
+/*
 .pets-page{
   color: rgb(7, 78, 65);
   margin-top: 0;
@@ -559,9 +561,11 @@ body{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  */
   /*max-width: 850px;*/
-}/* ! */
+/*} */
 
+/*
 .pets-addpet-menu{
   color: rgb(7, 78, 65);
   font-weight: bold;
@@ -611,12 +615,14 @@ body{
   overflow-y: scroll;
   height: 380px;
 }
+*/
 
 /*.pets-page-scroll::-webkit-scrollbar-thumb {
   background-color: #aaa;
   border-radius: 6px;
 }*/
 
+/*
 .pets-list{
   margin-left: 10px;
   margin-top: 50px;
@@ -642,6 +648,7 @@ body{
   margin-top: 15px;
   margin-bottom: 25px;
 }
+*/
 
 /*.petpage-button{
   margin-bottom: 20px;
@@ -649,6 +656,7 @@ body{
 
 /* - Pet Profile Page ------------------------------------------------------------------------*/
 
+/*
 .pet-profile-page{
   color: rgb(53, 39, 26);
   margin-top: 20px;
@@ -666,7 +674,6 @@ body{
 
 .profile-parts{
   display: flex;
-  /*gap: 20px;*/
 }
 
 .p-name{
@@ -675,11 +682,13 @@ body{
   padding-right: 10px;
   margin-top: 20px;
   margin-bottom: 25px;
+  */
   /*border: 2px solid rgb(20, 14, 35);
   box-shadow: 0 0px 4px rgb(13, 9, 23);
   border-radius: 7px;*/
-}
+/*}*/
 
+/*
 .pet-profile-info{
   border: 1px solid transparent;
   box-shadow: 0 0px 5px rgb(124, 115, 105);
@@ -731,20 +740,24 @@ body{
 .prof-link-back:hover{
   color: rgb(7, 78, 65);
 }
+*/
 
 /*.image-rica{
   width: 250px;
   height: 500px
 }*/
 
+/*
 .pet-profile-img{
   max-height: 515px;
   border: 1px solid rgb(124, 115, 105);
   border-radius: 12px;
 }
+*/
 
 /* - Create Page ------------------------------------------------------------------------*/
 
+/*
 .create-page{
   color: rgb(53, 39, 26);
   margin-top: -50px;
@@ -752,9 +765,11 @@ body{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  */
   /*max-width: 850px;*/
-}
+/*}*/
 
+/*
 .pets-create-form{
   margin-top: 0px;
   display: flex;
@@ -1008,6 +1023,7 @@ body{
   display: flex;
   justify-content: space-between;
 }
+*/
 
 /*.pets-button{
   color: rgb(53, 39, 26);
@@ -1024,6 +1040,7 @@ body{
 
 /* - Adopt Page ------------------------------------------------------------------------*/
 
+/*
 .adopt-page{
   color: rgb(53, 39, 26);
   margin-top: 20px;
@@ -1031,13 +1048,15 @@ body{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  */
   /*max-width: 850px;*/
-}
+/*}*/
 
 /*.adopt-pt1{
   display: flex;
 }*/
 
+/*
 .adopt-card{
   background-color: white;
   border: 2px solid rgb(7, 78, 65);
@@ -1132,3 +1151,4 @@ body{
 .adopt-buton{
   margin-top: 45px;
 }
+*/

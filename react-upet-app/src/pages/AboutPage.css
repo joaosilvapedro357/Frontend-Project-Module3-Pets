@@ -1,0 +1,63 @@
+/* - About Page ------------------------------------------------------------------------*/
+
+.about-page{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    background-size: cover;
+    width: 1470px;
+    height: 100vh;
+}
+
+.about-page-content{
+    padding-top: 120px;
+    margin-left: -15px;
+    width: 1190px;
+}
+
+.adopt-header{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 1200px;
+}
+
+.about-title{
+    color: rgb(21, 95, 79);
+    font-family: helvetica;
+    font-size: 45px;
+    margin-top: -10px;
+    margin-bottom: 0;
+}
+
+.about-title-1{
+    color: black;
+    font-family: helvetica;
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 0;
+}
+
+.adopt-apamg-image{
+    width:80px;
+    height:80px;
+    margin-top: -30px;
+  }
+
+.about-title-apamg{
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-info{
+    max-width: 1200px;
+}
+
+.about-descr{
+    font-family: Tahoma;
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 120px;
+    color: black;
+  }

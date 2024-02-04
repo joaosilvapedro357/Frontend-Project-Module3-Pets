@@ -1,0 +1,220 @@
+/* - Adopt Page ------------------------------------------------------------------------*/
+
+.adopt-page{
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  background-size: cover;
+  max-width: 1455px;
+  height: 550vh;
+}
+
+.adopt-page-content{
+  margin-left: 0px;
+  margin-top: 120px;
+}
+
+.adopt-header{
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.adopt-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px,580px));
+  gap: 35px;
+  margin-top: 35px;
+}
+
+/*.adopt-pt1{
+  display: flex;
+}*/
+
+.adopt-card{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  height: 260px;
+  background-color: rgb(209, 244, 215);
+  border-radius: 10px;
+  margin-top: 0px;
+  margin-bottom: 15px;
+  box-shadow: 0 1px 2px rgb(53, 39, 26);
+}
+
+.adopt-title{
+  color: rgb(21, 95, 79);
+  font-family: helvetica;
+  font-size: 45px;
+  margin-top: -10px;
+  margin-bottom: 0;
+}
+
+.adopt-descr{
+  font-family: Tahoma;
+  font-size: 17px;
+  font-weight: 500;
+  margin-top: 75px;
+  color: black;
+  margin-bottom: 0px;
+}
+
+.adopt-descr-2{
+  font-family: Tahoma;
+  font-size: 17px;
+  font-weight: 500;
+  margin-top: 25px;
+  color: black;
+  margin-bottom: 70px;
+}
+
+.adopt-create{
+  margin-top: 20px;
+  display: flex;
+}
+
+.createadopt-column{
+  display: flex;
+  flex-direction: column;
+}
+
+.adopt-form{
+  margin-top: 0px;
+  display: flex;
+}
+
+.adopt-create1{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 280px;
+  align-items: stretch;
+}
+
+.adopt-create2{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 280px;
+  align-items: stretch;
+  margin-left: 30px;
+}
+
+.adopt-pet-info{
+  color: black;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-left: 30px;
+  margin-top: -10px;
+}
+
+.pet-adopt-imgdet{
+  display: flex;
+  justify-content: space-between;
+}
+
+.pet-adopt-img{
+  max-height: 260px;
+  max-width: 260px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.adopt-pet-name{
+  margin-bottom: 0px;
+}
+
+.adopt-pet-descr{
+  max-width: 240px;
+  text-align: justify;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+
+.adopt-pet-det{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.adopt-pet-age{
+  max-width: 240px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.adopt-pet-sex{
+  max-width: 240px;
+  text-align: center;
+  font-weight: 600;
+  margin-top: -15px;
+}
+
+.adopt-pet-size{
+  max-width: 240px;
+  text-align: center;
+  font-weight: 600;
+  margin-top: -15px;
+}
+
+.adopt-pet-health{
+  max-width: 240px;
+  text-align: center;
+  font-weight: 600;
+  margin-top: -15px;
+}
+
+.adopt-pet-association{
+  max-width: 240px;
+  text-align: center;
+  font-weight: 600;
+  margin-top: -15px;
+}
+
+.adopt-button{
+  color: rgb(53, 39, 26);
+  font-weight: bold;
+  border: 1px solid rgb(53, 39, 26);
+  background-color: transparent;
+  padding-left: 17px;
+  padding-right: 17px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgb(53, 39, 26);
+  margin-top: 50px;
+}
+
+.adopt-button:hover{
+  color: rgb(7, 78, 65);
+}
+
+.adopt-apamg-image{
+  width:100px;
+  height:100px;
+  margin-top: -30px;
+}
+
+.adopt-buton{
+  margin-top: 45px;
+}
+
+.insta-link{
+  color: rgb(64, 145, 214);
+}
+
+.insta-link:hover{
+  color: rgb(55, 122, 182);
+}
+
+.fb-link{
+  color: rgb(64, 145, 214);
+}
+
+.fb-link:hover{
+  color: rgb(55, 122, 182);
+}

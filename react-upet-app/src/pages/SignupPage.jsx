@@ -1,6 +1,8 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import {useNavigate, useParams} from 'react-router-dom'
+import './SignupPage.css';
+import '../App.css';
 
 const BACKEND_URL = 'https://upet.adaptable.app';
 
@@ -40,93 +42,95 @@ function SignUpPage() {
     
   return (
     <div className='signup-page'>
-        <div className='signup-title'>
-        <h3>Sign Up Page</h3>
+        <div className='signup-page-1'>
+            <div className='signup-title'>
+                <h3>Create your account</h3>
+            </div>
+            <div className='signup-page-card'>
+                <form className='signup-form' onSubmit = {handleSignUpsubmit}>
+                    <div className='signup-form-parts'>
+                        <div className='signup-form-grid'>
+                            <div className='signup-form-email'>
+                                <div>
+                                    <label>Email</label>
+                                </div>
+                                <div>
+                                    <input type ="email" name ="email" value = {email} 
+                                    onChange={(e)=> setEmail(e.target.value)}/>
+                                </div>
+                            </div>
+                            <div className='signup-form-password'>
+                                <div>
+                                    <label>Password</label>
+                                </div>
+                                <div>
+                                    <input type ="password" name ="password" value = {password} 
+                                    onChange={(e)=> setPassword(e.target.value)}/>
+                                </div>
+                            </div>
+                            <div className='signup-form-username'>
+                                <div>
+                                    <label>Username</label>
+                                </div>
+                                <div>
+                                    <input type ="text" name ="name" value = {name} 
+                                    onChange={(e)=> setName(e.target.value)}/>
+                                </div>
+                            </div>
+                            <div className='signup-form-phone'>
+                                <div>
+                                    <label>Phone number</label>
+                                </div>
+                                <div>
+                                    <input type ="number" name ="phoneNumber" value = {phoneNumber} 
+                                    onChange={(e)=> setPhoneNumber(e.target.value)}/>
+                                </div>
+                            </div>
+                            <div className='signup-form-country'>
+                                <div>
+                                    <label>Country</label>
+                                </div>
+                                <div>
+                                    <input type ="text" name ="country" value = {country} 
+                                    onChange={(e)=> setCountry(e.target.value)}/>
+                                </div>
+                            </div>
+                            <div className='signup-form-city'>
+                                <div>
+                                    <label>City</label>
+                                </div>
+                                <div>
+                                    <input type ="text" name ="city" value = {city} 
+                                    onChange={(e)=> setCity(e.target.value)}/>
+                                </div>
+                            </div>
+                            <div className='signup-form-address'>
+                                <div>
+                                    <label>Address</label>
+                                </div>
+                                <div>
+                                    <input type ="text" name ="address" value = {address} 
+                                    onChange={(e)=> setAddress(e.target.value)}/>
+                                </div>
+                            </div>
+                            <div className='signup-form-nrpets'>
+                                <div>
+                                    <label>Numbers of Pets</label>
+                                </div>
+                                <div>
+                                    <input type ="number" name ="numberOfPets" value = {numberOfPets} 
+                                    onChange={(e)=> setNumberOfPets(e.target.value)}/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='signup-button'>
+                        <button className='signup-form-button' type="submit">Sign Up</button>
+                    </div>
+                    {error && <p>{error}</p>}
+                </form>
+            </div>
         </div>
-        <form onSubmit = {handleSignUpsubmit}>
-        <div className='signup-form'>
-            <div className='signup-form-pt1'>
-            <div className='signup-form-email'>
-                <div>
-                <label>Email</label>
-                </div>
-                <div>
-                <input type ="email" name ="email" value = {email} 
-                onChange={(e)=> setEmail(e.target.value)}/>
-                </div>
-            </div>
-            <div className='signup-form-password'>
-                <div>
-                <label>Password</label>
-                </div>
-                <div>
-                <input type ="password" name ="password" value = {password} 
-                onChange={(e)=> setPassword(e.target.value)}/>
-                </div>
-            </div>
-            <div className='signup-form-username'>
-                <div>
-                <label>Username</label>
-                </div>
-                <div>
-                <input type ="text" name ="name" value = {name} 
-                onChange={(e)=> setName(e.target.value)}/>
-                </div>
-            </div>
-            <div className='signup-form-phone'>
-                <div>
-                <label>Phone number</label>
-                </div>
-                <div>
-                <input type ="number" name ="phoneNumber" value = {phoneNumber} 
-                onChange={(e)=> setPhoneNumber(e.target.value)}/>
-                </div>
-            </div>
-            </div>
-            <div className='signup-form-pt2'>
-            <div className='signup-form-country'>
-                <div>
-                <label>Country</label>
-                </div>
-                <div>
-                <input type ="text" name ="country" value = {country} 
-                onChange={(e)=> setCountry(e.target.value)}/>
-                </div>
-            </div>
-            <div className='signup-form-city'>
-                <div>
-                <label>City</label>
-                </div>
-                <div>
-                <input type ="text" name ="city" value = {city} 
-                onChange={(e)=> setCity(e.target.value)}/>
-                </div>
-            </div>
-            <div className='signup-form-address'>
-                <div>
-                <label>Address</label>
-                </div>
-                <div>
-                <input type ="text" name ="address" value = {address} 
-                onChange={(e)=> setAddress(e.target.value)}/>
-                </div>
-            </div>
-            <div className='signup-form-nrpets'>
-                <div>
-                <label>Numbers of Pets</label>
-                </div>
-                <div>
-                <input type ="number" name ="numberOfPets" value = {numberOfPets} 
-                onChange={(e)=> setNumberOfPets(e.target.value)}/>
-                </div>
-            </div>
-            </div>
-            </div>
-            <div className='signup-button'>
-                <button className='signup-form-button' type="submit">Sign Up</button>
-            </div>
-            {error && <p>{error}</p>}
-        </form>
     </div>
   )
 }

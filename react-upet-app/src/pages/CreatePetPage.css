@@ -1,0 +1,336 @@
+/* - Create Page ------------------------------------------------------------------------*/
+
+.create-page{
+  color: rgb(53, 39, 26);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  height: 100vh;
+  width: 1470px;
+  /*max-width: 850px;*/
+}
+
+.create-page-content{
+  margin-top: 70px;
+  width: 1205px;
+}
+
+.create-card{
+  background-color: rgb(209, 244, 215);
+  padding: 30px;
+  width: 1140px;
+  height: 450px;
+  margin-top: 25px;
+  margin-left: 2px;
+  border-radius: 10px;
+  justify-content: center;
+  box-shadow: 0 1px 2px rgb(53, 39, 26);
+}
+
+.pets-create-form{
+  margin-top: 15px;
+}
+
+.pets-create{
+  margin-top: -20px;
+  display: grid;
+  flex-direction: column;
+  justify-content: center;
+  grid-template-columns: repeat(4, minmax(100px,200px));
+  align-items: center;
+  gap: 15px;
+  column-gap: 50px;
+}
+
+.add-button{
+  margin-top: 30px;
+  margin-left: 90px;
+  color: black;
+  font-family: helvetica;
+  font-size: 20px;
+  border: 1px solid black;
+  background-color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-radius: 7px;
+  box-shadow: 0 1px 2px rgb(53, 39, 26);
+}
+
+.add-button:hover{
+  color: rgb(21, 95, 79);
+  border: 1px solid black;
+}
+
+.add-button:focus{
+  color: rgb(21, 95, 79);
+  border-color: transparent;
+  outline: none;
+}
+
+.create-title{
+  color: rgb(21, 95, 79);
+  font-family: helvetica;
+  font-size: 45px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.createpage-description{
+  color: black;
+  font-weight: 500;
+  font-family: helvetica;
+  font-size: 17px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.creatediv-column{
+  display: flex;
+  flex-direction: column;
+}
+
+.form-space {
+  margin-top: -65px;
+}
+
+.pet-create1{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 280px;
+  align-items: stretch;
+}
+
+.pet-create2{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 280px;
+  align-items: stretch;
+  margin-left: 30px;
+}
+
+/* .p-form-name{
+  border: 2px solid rgb(124, 115, 105);
+  box-shadow: 0 0px 2px rgb(124, 115, 105);
+  border-radius: 5px;
+  padding: 2px;
+  margin: 3px;
+  margin-top: 20px;
+}
+
+.p-form-image{
+  border: 2px solid rgb(124, 115, 105);
+  box-shadow: 0 0px 5px rgb(124, 115, 105);
+  border-radius: 5px;
+  padding: 2px;
+  margin: 3px;
+}
+
+.p-form-age{
+  border: 2px solid rgb(124, 115, 105);
+  box-shadow: 0 0px 2px rgb(124, 115, 105);
+  border-radius: 5px;
+  padding: 2px;
+  margin: 3px;
+}
+
+.p-form-breed{
+  border: 2px solid rgb(124, 115, 105);
+  box-shadow: 0 0px 2px rgb(124, 115, 105);
+  border-radius: 5px;
+  padding: 2px;
+  margin: 3px;
+}
+
+.p-form-hair{
+  border: 2px solid rgb(124, 115, 105);
+  box-shadow: 0 0px 2px rgb(124, 115, 105);
+  border-radius: 5px;
+  padding: 2px;
+  margin: 3px;
+}
+
+.p-form-chip{
+  border: 2px solid rgb(124, 115, 105);
+  box-shadow: 0 0px 2px rgb(124, 115, 105);
+  border-radius: 5px;
+  padding: 2px;
+  margin: 3px;
+}
+
+.p-form-sex{
+  border: 2px solid rgb(124, 115, 105);
+  box-shadow: 0 0px 2px rgb(124, 115, 105);
+  border-radius: 5px;
+  padding: 2px;
+  margin: 3px;
+}
+
+.p-form-size{
+  border: 2px solid rgb(124, 115, 105);
+  box-shadow: 0 0px 2px rgb(124, 115, 105);
+  border-radius: 5px;
+  padding: 2px;
+  margin: 3px;
+}
+
+.p-form-weight{
+  border: 2px solid rgb(124, 115, 105);
+  box-shadow: 0 0px 2px rgb(124, 115, 105);
+  border-radius: 5px;
+  padding: 2px;
+  margin: 3px;
+}
+
+.p-form-description{
+  font-family: Tahoma;
+  border: 2px solid rgb(124, 115, 105);
+  box-shadow: 0 0px 2px rgb(124, 115, 105);
+  border-radius: 5px;
+  padding: 2px;
+  margin: 3px;
+}
+
+.p-form-diet{
+  font-family: Tahoma;
+  border: 2px solid rgb(124, 115, 105);
+  box-shadow: 0 0px 2px rgb(124, 115, 105);
+  border-radius: 5px;
+  padding: 2px;
+  margin: 3px;
+}
+
+.p-form-medical{
+  font-family: Tahoma;
+  border: 2px solid rgb(124, 115, 105);
+  box-shadow: 0 0px 2px rgb(124, 115, 105);
+  border-radius: 5px;
+  padding: 2px;
+  margin: 3px;
+}
+
+.form-name{
+  align-items: end;
+}
+
+.form-image{
+  align-items: end;
+}
+
+.form-age{
+  align-items: end;
+}
+
+.form-breed{
+  align-items: end;
+}
+
+.form-hair{
+  align-items: end;
+}
+
+.form-chip{
+  align-items: end;
+}
+
+.form-sex{
+  align-items: end;
+}
+
+.form-size{
+  align-items: end;
+}
+
+.form-weight{
+  align-items: end;
+}
+
+.form-description{
+  align-items: end;
+}
+
+.form-diet{
+  align-items: end;
+}
+
+.form-medical{
+  align-items: end;
+}
+
+.form-pet-name{
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-pet-image{
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-pet-age{
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-pet-breed{
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-pet-hair{
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-pet-chip{
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-pet-sex{
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-pet-size{
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-pet-weight{
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-pet-description{
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-pet-diet{
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-pet-medical{
+  display: flex;
+  justify-content: space-between;
+} */
+
+/*.pets-button{
+  color: rgb(53, 39, 26);
+  font-weight: bold;
+  border: 1px solid rgb(53, 39, 26);
+  background-color: transparent;
+  padding-left: 17px;
+  padding-right: 17px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgb(53, 39, 26);
+}*/

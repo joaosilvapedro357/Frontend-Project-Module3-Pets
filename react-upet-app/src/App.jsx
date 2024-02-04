@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import './App.css';
 import { Routes, Route, Navigate, useParams } from "react-router-dom";
-
 import HomePage from './pages/HomePage.jsx';
 import SignUpPage from './pages/SignupPage.jsx';
 import LoginPage from './pages/LoginPage'; //'./pages/LoginPage.jsx'
@@ -15,6 +14,7 @@ import Navbar from './Components/Navbar.jsx';
 import Sidebar from './Components/Sidebar.jsx';
 import AddPetMenu from './Components/AddPetMenu.jsx';
 import IsPrivate from './Components/IsPrivate.jsx';
+import AboutPage from './pages/AboutPage.jsx';
 
 function App() {
 
@@ -34,7 +34,8 @@ function App() {
           <Route path="/:userId/pets/add" element={<IsPrivate><CreatePetPage /></IsPrivate>} />
           <Route path="/:userId/pets" element={<IsPrivate><PetsPage /></IsPrivate>} />
           <Route path="/adopt" element={<AdoptPage />} />
-          <Route path="/user" element={<UserPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/users/:userId" element={<UserPage />}/>
         </Routes>
         </div>
       </div>
