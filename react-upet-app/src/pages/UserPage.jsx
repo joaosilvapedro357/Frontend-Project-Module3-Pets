@@ -4,7 +4,7 @@ import axios from 'axios';
 import './UserPage.css';
 import '../App.css';
 
-const BACKEND_URL = 'http://localhost:3000';
+const BACKEND_URL = 'https://upet.adaptable.app';
 
 
 function UserPage() {
